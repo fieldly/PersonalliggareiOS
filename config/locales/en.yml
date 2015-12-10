@@ -1,0 +1,66 @@
+en: 
+  loading:
+    activating: Activating
+    pausing: Pausing
+    completing: Completing
+    fetching: Fetching
+    sending: Sending
+    deleting: Deleting
+    updating: Updating
+    closing: Closing
+    pausing: Pausing
+    reactivating: Reactivating
+    sent: "Sent!"
+    updated: "Updated!"
+    deleted: "Deleted!"
+    missing: "All fields marked with * is mandatory"
+    server_error: "Something went wrong"
+    failed: "Failed to send"
+    login_failed: "Wrong email or password"
+    selecting: Selecting
+    no_connection: "No connection"
+  refresh: 
+    fetching: "Fetching data..."
+    pull: "Pull to refresh"
+    release: "Release to refresh"
+  message:
+    no_connection: "You need an internet connection"
+    no_attachment: There are no attached file
+    no_project_id: Select a project
+    no_value: Missing
+    not_released: This functionality will be released when the new version of the Fieldly project management tool will be released
+  dialog:
+    message_refreshed_projects: "Projects was updated"
+    message_refreshed_workorders: "Workorders was updated"
+    message_refreshed_destinations: "Destinations was updated"
+    message_new_task: "You got a new task"
+    message_updated_task: "One of your tasks was updated"
+    message_travel_error: "Enter all fields"
+    message_workorder_error: "Enter all fields"
+    message_timereport_error: Enter all fields
+    message_timereport_size_error: "End date is smaller than start date"
+    message_google_error: "Something went wrong try another address or try later"
+  general:
+    label_project: Project
+  login:
+    heading: Login
+    label_email: Email address *
+    label_email_info: Enter your email address
+    label_password: Password *
+    label_password_info: Enter your password
+    placeholder_email: Click here to enter your email
+    placeholder_password: Click here to enter your password
+    button_login: LOGIN
+    message_missing_fields: Enter both fields
+  ledgers:
+    heading: Digital ledgers
+    heading_details: Digital ledgers
+    label_click_to_select: Click to select
+    label_authority: Skatteverket
+    label_emergency: Emergency
+    label_attachments: Documents
+    label_worksite: Work site
+    label_actions: Actions
+    label_checkin: I am here
+    label_checkout: I am leaving
+

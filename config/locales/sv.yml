@@ -1,0 +1,67 @@
+sv: 
+  loading:
+    activating: Aktiverar
+    pausing: Pausar
+    completing: Avslutar
+    fetching: Hämtar
+    sending: Skickar
+    deleting: Raderar
+    updating: Uppdaterar
+    closing: Stänger
+    pausing: Pausar
+    reactivating: Återaktiverar
+    sent: "Skickat!"
+    updated: "Uppdaterad!"
+    deleted: "Raderad!"
+    missing: "Alla fält markerade med * är obligatoriska"
+    server_error: "Något gick fel"
+    failed: "Gick inte skicka"
+    selecting: Väljer
+    login_failed: "Fel epostadress eller lösenord"
+    no_connection: "Ingen uppkoppling"
+  refresh: 
+    fetching: "Hämtar data..."
+    pull: "Dra för att ladda om"
+    release: "Släpp för att ladda om"
+  message:
+    no_connection: "Du behöver en internetuppkoppling"
+    no_attachment: Det finns ingen bifogad fil
+    no_project_id: Välj ett projekt
+    no_value: Saknas
+    not_released: Denna funktion kommer att släppas samtidigt som vi släpper vår nya version av Fieldly projekthantering
+  dialog:
+    message_refreshed_projects: "Projekten är uppdaterade"
+    message_refreshed_workorders: "Arbetsordrarna är uppdaterade"
+    message_refreshed_destinations: "Platserna är uppdaterade"
+    message_new_task: "Du fick en ny uppgift"
+    message_updated_task: "En av dina uppgifter ändrades"
+    message_travel_error: "Välj alla fält"
+    message_timereport_error: Välj alla fält
+    message_timereport_size_error: "Sluttid är mindre än starttid"
+    message_workorder_error: "Välj alla fält"
+    message_google_error: "Något gick fel testa en annan adress eller vänta en liten stund och prova igen"
+  general:
+    label_project: Projekt
+  login:
+    heading: Inloggning
+    label_email: Epostadress *
+    label_email_info: Ange din epostadress
+    label_password: Lösenord *
+    label_password_info: Ange ditt lösenord
+    placeholder_email: Klicka här för att lägga till epost
+    placeholder_password: Klicka här för att lägga till lösenord
+    button_login: LOGGA IN
+    message_missing_fields: Alla fält markerade med * är obligatoriska
+  ledgers:
+    heading: Personalliggare
+    heading_details: Personalliggare
+    label_click_to_select: Klicka för att välja
+    label_authority: Skatteverket
+    label_emergency: Nödlista
+    label_attachments: Dokument
+    label_worksite: Arbetsplats
+    label_actions: Åtgärder
+    label_checkin: Jag är på plats
+    label_checkout: Jag lämnar platsen
+
+    
