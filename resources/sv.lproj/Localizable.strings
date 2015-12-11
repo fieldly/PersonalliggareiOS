@@ -66,3 +66,4 @@
 "attachments.heading_show" = "Visa sida";
 "attachments.label_archive" = "Tillgängliga dokument";
 "attachments.message_empty" = "Det finns inga dokument";
+"emergency.heading" = "Nödlista";

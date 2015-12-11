@@ -56,9 +56,7 @@ class LedgersDetailsScreen < BaseScreen
 
     @layout.icon_emergency.when_tapped do
 
-      #open EmergencyScreen.new nav_bar: true, ledger_id: @ledger_id
-
-      p "Emergency"
+      open EmergencyScreen.new nav_bar: true, ledger_id: @ledger_id
 
     end
 

@@ -46,6 +46,18 @@ schema "0001 initial" do
 
   end
 
+  entity "LedgerUser" do
+
+    integer32 :id
+    integer32 :account_id
+    string    :fullname
+    string    :email
+    string    :phone
+    boolean   :activated
+    datetime  :created_at
+
+  end
+
   entity "Attachment" do
 
     integer32 :id

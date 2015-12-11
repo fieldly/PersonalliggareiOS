@@ -76,5 +76,7 @@ sv:
     heading_show: Visa sida
     label_archive: Tillgängliga dokument
     message_empty: Det finns inga dokument
+  emergency:
+    heading: Nödlista
 
     

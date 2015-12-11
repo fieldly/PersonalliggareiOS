@@ -76,4 +76,6 @@ en:
     heading_show: Show page
     message_empty: There are no attachments
     label_archive: Available attachments
+  emergency:
+    heading: Emergency list
 
