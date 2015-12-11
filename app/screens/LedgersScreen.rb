@@ -6,6 +6,8 @@ class LedgersScreen < BaseScreen
 
     @ledgers ||= []
 
+    create_nav_button_plain :action => 'logout', :position => 'right', :label => "", :size => 19
+
   end
 
   def on_appear
@@ -276,6 +278,17 @@ class LedgersScreen < BaseScreen
     @ledgers = Ledger.sort_by(:title, :ascending)
     @ledgers
     
+  end
+
+  def logout
+
+    users = BackendUser.all
+    users.each { |user| user.destroy }
+
+    cdq.save
+
+    open_modal LoginScreen.new nav_bar: true
+
   end
 
 end
