@@ -217,8 +217,10 @@ class AttachmentsScreen < BaseScreen
   end
 
   def close_window
+
+    App.notification_center.post "updateLedgerEntry"
     
-    close do_nothing: true
+    close
 
   end
 

@@ -18,19 +18,32 @@ class LedgersDetailsScreen < BaseScreen
 
   end
 
+  def will_dismiss
+
+    App.notification_center.unobserve @update_ledger_entry_observer
+
+  end
+
   def setup_layout
 
     @layout = LedgersDetailsLayout.new(root: self.view).build
 
     @data = Ledger.where(:id).eq(@ledger_id).first
-    @entry = LedgerEntry.where(:ledger_id).eq(@ledger_id).last
 
     Base.save_coordinates
+
+    setup_entry
 
     setup_actions
 
     setup_properties
 
+  end
+
+  def setup_entry
+
+    @entry = LedgerEntry.where(:ledger_id).eq(@ledger_id).last
+    
   end
 
   def setup_actions
@@ -69,6 +82,16 @@ class LedgersDetailsScreen < BaseScreen
 
   end
 
+  def setup_observers
+
+    @update_ledger_entry_observer = App.notification_center.observe "updateLedgerEntry" do |notification|
+
+      setup_entry
+
+    end
+
+  end
+
   def setup_properties
 
     @layout.line_1.setText(set_value(@data.title))
@@ -78,6 +101,8 @@ class LedgersDetailsScreen < BaseScreen
     if @entry
 
       if @entry.status == "in"
+
+        @layout.line_4.setText(@entry.created_at.strftime('%Y-%m-%d %H:%M').to_s)
 
         @layout.button_checkin.hidden = true
         @layout.button_checkout.hidden = false
@@ -131,7 +156,7 @@ class LedgersDetailsScreen < BaseScreen
 
         when true
 
-          Ledger.update_status(@data.id, "in", get_data("latitude"), get_data("longitude"), true) do |result|
+          LedgerEntry.create_entry(@data.id, "in", get_data("latitude"), get_data("longitude"), true) do |result|
 
             if result
 
@@ -169,7 +194,7 @@ class LedgersDetailsScreen < BaseScreen
 
         when true
 
-          Ledger.update_status(@data.id, "out", get_data("latitude"), get_data("longitude"), true) do |result|
+          LedgerEntry.create_entry(@data.id, "out", get_data("latitude"), get_data("longitude"), true) do |result|
 
             if result
 

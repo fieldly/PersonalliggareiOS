@@ -8,7 +8,7 @@ class AuthorityScreen < BaseScreen
 
     @workorders ||= []
 
-    create_nav_button_plain :action => 'close', :position => 'left', :label => "", :size => 18
+    create_nav_button_plain :action => 'close_window', :position => 'left', :label => "", :size => 18
  
   end
 
@@ -68,7 +68,7 @@ class AuthorityScreen < BaseScreen
 
         when true
 
-          Ledger.fetch_entries(@data.id, @layout.textfield.text, true) do |result, code|
+          Ledger.send_to_authorities(@data.id, @layout.textfield.text, true) do |result, code|
 
             if result
 
@@ -87,6 +87,14 @@ class AuthorityScreen < BaseScreen
       end
 
     end
+
+  end
+
+  def close_window
+
+    App.notification_center.post "updateLedgerEntry"
+    
+    close
 
   end
 
