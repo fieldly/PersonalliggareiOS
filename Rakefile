@@ -9,7 +9,7 @@ rescue LoadError
 end
 
 Motion::Project::App.setup do |app|
-  app.name = 'Personalliggare'
+  app.name = 'Fieldly'
   app.version = "1.0.0"
   app.short_version = "1.0.0"
   app.deployment_target = '7.0'

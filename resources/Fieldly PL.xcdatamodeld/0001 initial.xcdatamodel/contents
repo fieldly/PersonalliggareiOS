@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="0001 initial" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+  <entity name="BackendUser" syncable="YES" representedClassName="BackendUser">
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="account_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="access_token"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="firstname"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="lastname"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="email"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="phone"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="locale"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="currency_symbol"/>
+    <attribute optional="YES" syncable="YES" attributeType="Boolean" name="currency_symbol_first"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="address"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="address_2"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="address_full"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="zipcode"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="city"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="state"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="country"/>
+    <attribute optional="YES" syncable="YES" attributeType="Boolean" name="manage_workorders"/>
+  </entity>
+  <entity name="Ledger" syncable="YES" representedClassName="Ledger">
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="title"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="location"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="site_id_number"/>
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="backend_user_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="Date" name="starts_at"/>
+    <attribute optional="YES" syncable="YES" attributeType="Date" name="ends_at"/>
+  </entity>
+  <entity name="LedgerEntry" syncable="YES" representedClassName="LedgerEntry">
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="remote_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="backend_user_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="ledger_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="status"/>
+    <attribute optional="YES" syncable="YES" attributeType="Date" name="created_at"/>
+  </entity>
+  <entity name="LedgerUser" syncable="YES" representedClassName="LedgerUser">
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="account_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="fullname"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="email"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="phone"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="status"/>
+    <attribute optional="YES" syncable="YES" attributeType="Boolean" name="activated"/>
+    <attribute optional="YES" syncable="YES" attributeType="Date" name="created_at"/>
+  </entity>
+  <entity name="Attachment" syncable="YES" representedClassName="Attachment">
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="account_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="remote_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="attachable_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="attachable_type"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="title"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="filename"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="filetype"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="filesize"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="fileurl"/>
+    <attribute optional="YES" syncable="YES" attributeType="Date" name="created_at"/>
+  </entity>
+</model>
