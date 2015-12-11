@@ -2,8 +2,9 @@ module GeneralStyles
 
   def box_info_style
     width 345 if BaseScreen.iphone6
-    width 320 unless BaseScreen.iphone6
-    height 90
+    width 290 unless BaseScreen.iphone6
+    height 90 if BaseScreen.iphone6
+    height 110 unless BaseScreen.iphone6
     background_color "#FFFFFF".uicolor
     layer do
       corner_radius 3.0
@@ -19,8 +20,9 @@ module GeneralStyles
     top 0
     left 10
     width 335 if BaseScreen.iphone6
-    width 310 unless BaseScreen.iphone6
-    height 90
+    width 280 unless BaseScreen.iphone6
+    height 90 if BaseScreen.iphone6
+    height 110 unless BaseScreen.iphone6
   end
 
   def box_info_3_lines_label_style
@@ -32,8 +34,9 @@ module GeneralStyles
     top 0
     left 10
     width 325 if BaseScreen.iphone6
-    width 300 unless BaseScreen.iphone6
-    height 75
+    width 270 unless BaseScreen.iphone6
+    height 75 if BaseScreen.iphone6
+    height 95 unless BaseScreen.iphone6
   end
 
   def box_info_centered_style
@@ -65,7 +68,7 @@ module GeneralStyles
     top 15
     left 15
     width 345 if BaseScreen.iphone6
-    width 320 unless BaseScreen.iphone6
+    width 290 unless BaseScreen.iphone6
     height 20
     background_color "#FFFFFF".uicolor
     layer do
@@ -214,7 +217,7 @@ module GeneralStyles
   def box_textfield_top_condensed_style
     top 0
     width 345 if BaseScreen.iphone6
-    width 320 unless BaseScreen.iphone6
+    width 290 unless BaseScreen.iphone6
     height 10
     background_color "#FFFFFF".uicolor
     layer do

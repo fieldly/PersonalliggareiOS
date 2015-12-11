@@ -83,8 +83,8 @@ class AuthorityLayout < MK::Layout
           end
         end
         add UIView, :box_bottom do
-          frame [[0,168],[290,32]] if BaseScreen.iphone4
-          frame [[0,168],[290,32]] if BaseScreen.iphone5
+          frame [[0,181],[290,32]] if BaseScreen.iphone4
+          frame [[0,181],[290,32]] if BaseScreen.iphone5
           frame [[0,165],[345,32]] if BaseScreen.iphone6
           frame [[0,168],[485,32]] if BaseScreen.iphone6plus
           add UILabel, :box_bottom_label do
@@ -95,8 +95,8 @@ class AuthorityLayout < MK::Layout
       end
 
       @button_fetch = add UILabel, :button_green do
-        frame [[0,232],[290,40]] if BaseScreen.iphone4
-        frame [[0,232],[290,40]] if BaseScreen.iphone5
+        frame [[0,252],[290,40]] if BaseScreen.iphone4
+        frame [[0,252],[290,40]] if BaseScreen.iphone5
         frame [[0,232],[345,40]] if BaseScreen.iphone6
         frame [[0,232],[384,40]] if BaseScreen.iphone6plus
         text I18n.t("ledgers.button_fetch")

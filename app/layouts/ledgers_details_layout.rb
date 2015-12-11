@@ -120,8 +120,8 @@ class LedgersDetailsLayout < MK::Layout
     end
 
     @date = add UIView, :box do
-      frame [[0,360],[320,95]] if BaseScreen.iphone4
-      frame [[0,450],[320,95]] if BaseScreen.iphone5
+      frame [[0,435],[320,95]] if BaseScreen.iphone4
+      frame [[0,337],[320,95]] if BaseScreen.iphone5
       frame [[0,435],[380,95]] if BaseScreen.iphone6
       frame [[0,618],[380,95]] if BaseScreen.iphone6plus
       add UIView, :box_top
