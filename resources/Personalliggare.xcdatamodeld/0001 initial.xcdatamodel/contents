@@ -43,6 +43,7 @@
     <attribute optional="YES" syncable="YES" attributeType="String" name="fullname"/>
     <attribute optional="YES" syncable="YES" attributeType="String" name="email"/>
     <attribute optional="YES" syncable="YES" attributeType="String" name="phone"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="status"/>
     <attribute optional="YES" syncable="YES" attributeType="Boolean" name="activated"/>
     <attribute optional="YES" syncable="YES" attributeType="Date" name="created_at"/>
   </entity>

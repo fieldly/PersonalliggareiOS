@@ -2,7 +2,7 @@ class LedgerUser < CDQManagedObject
 
   Notifier = Motion::Blitz
 
-  def self.fetch_content(message, &callback)
+  def self.fetch_content(ledger, message, &callback)
 
     data = {access_token: Base.access_token}
 
@@ -40,6 +40,7 @@ class LedgerUser < CDQManagedObject
             user['email'] = "patrik@fieldly.com"
             user['phone'] = "123456"
             user['activated'] = false
+            user['status'] = "in"
             user['created_at'] = Time.now
 
             output << LedgerUser.create(user)

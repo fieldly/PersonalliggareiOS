@@ -53,6 +53,7 @@ schema "0001 initial" do
     string    :fullname
     string    :email
     string    :phone
+    string    :status
     boolean   :activated
     datetime  :created_at
 

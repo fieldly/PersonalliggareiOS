@@ -1,6 +1,6 @@
 class EmergencyScreen < BaseScreen
 
-  attr_accessor :type
+  attr_accessor :ledger_id
 
   title I18n.t("emergency.heading")
 
@@ -80,7 +80,7 @@ class EmergencyScreen < BaseScreen
 
       when true
 
-        LedgerUser.fetch_content(true) do |success, response|
+        LedgerUser.fetch_content(@ledger_id, true) do |success, response|
 
           case success
 
@@ -136,7 +136,8 @@ class EmergencyScreen < BaseScreen
     title.frame = [[10,0],[250,42]] if BaseScreen.iphone6plus
     title.text = data.fullname
     title.font = "OpenSans-Bold".uifont(13)
-    title.textColor = "#333".to_color
+    title.textColor = "#333".to_color if data.status == "in"
+    title.textColor = "#e74c3c".to_color if data.status == "out"
     title.textAlignment = UITextAlignmentLeft
     title.backgroundColor = UIColor.clearColor
 
