@@ -100,7 +100,7 @@ class LedgersDetailsScreen < BaseScreen
 
       if @entry.status == "in"
 
-        @layout.line_4.setText(@entry.created_at.strftime('%Y-%m-%d %H:%M').to_s)
+        @layout.line_4.setText(@entry.created_at.strftime('%b %d %H:%M').to_s)
 
         @layout.button_checkin.hidden = true
         @layout.button_checkout.hidden = false
@@ -160,7 +160,7 @@ class LedgersDetailsScreen < BaseScreen
 
               @running = false
 
-              @layout.line_4.setText(Time.now.strftime('%Y-%m-%d %H:%M').to_s)
+              @layout.line_4.setText(Time.now.strftime('%b %d %H:%M').to_s)
 
               @layout.button_checkin.hidden = true
               @layout.button_checkout.hidden = false
