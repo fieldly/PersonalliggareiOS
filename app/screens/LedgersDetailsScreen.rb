@@ -98,6 +98,8 @@ class LedgersDetailsScreen < BaseScreen
 
             if result
 
+              @running = false
+
               @layout.button_checkin.hidden = true
               @layout.button_checkout.hidden = false
 
@@ -128,6 +130,8 @@ class LedgersDetailsScreen < BaseScreen
           Ledger.update_status(@data.id, "out", get_data("latitude"), get_data("longitude"), true) do |result|
 
             if result
+
+              @running = false
 
               @layout.button_checkin.hidden = false
               @layout.button_checkout.hidden = true

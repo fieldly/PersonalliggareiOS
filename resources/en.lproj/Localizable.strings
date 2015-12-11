@@ -52,5 +52,5 @@
 "ledgers.label_attachments" = "Documents";
 "ledgers.label_worksite" = "Work site";
 "ledgers.label_actions" = "Actions";
-"ledgers.label_checkin" = "I am here";
-"ledgers.label_checkout" = "I am leaving";
+"ledgers.label_checkin" = "I AM HERE";
+"ledgers.label_checkout" = "I AM LEAVING";

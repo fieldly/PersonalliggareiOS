@@ -52,5 +52,5 @@
 "ledgers.label_attachments" = "Dokument";
 "ledgers.label_worksite" = "Arbetsplats";
 "ledgers.label_actions" = "Åtgärder";
-"ledgers.label_checkin" = "Jag är på plats";
-"ledgers.label_checkout" = "Jag lämnar platsen";
+"ledgers.label_checkin" = "JAG ÄR PÅ PLATSEN";
+"ledgers.label_checkout" = "JAG LÄMNAR PLATSEN";
