@@ -1,4 +1,4 @@
-class LedgersLayout < MK::Layout
+class AttachmentsLayout < MK::Layout
 
   include GeneralStyles
   
@@ -16,12 +16,12 @@ class LedgersLayout < MK::Layout
       frame [[0,0],[290,387]] if BaseScreen.iphone4
       frame [[0,0],[290,474]] if BaseScreen.iphone5
       frame [[0,0],[435,550]] if BaseScreen.iphone6
-      frame [[0,0],[485,550]] if BaseScreen.iphone6plus
+      frame [[0,0],[485,642]] if BaseScreen.iphone6plus
       add UIView, :empty_background do
         frame [[0,15],[290,387]] if BaseScreen.iphone4
         frame [[0,15],[290,474]] if BaseScreen.iphone5
         frame [[0,15],[344,573]] if BaseScreen.iphone6
-        frame [[0,15],[394,573]] if BaseScreen.iphone6plus
+        frame [[0,15],[384,642]] if BaseScreen.iphone6plus
         add UIImageView, :empty_image do
           frame [[70,50],[150,200]] if BaseScreen.iphone4
           frame [[40,50],[200,250]] if BaseScreen.iphone5
@@ -29,11 +29,11 @@ class LedgersLayout < MK::Layout
           frame [[50,70],[240,300]] if BaseScreen.iphone6plus
         end
         add UILabel, :empty_label do
-          frame [[20,250],[250,100]] if BaseScreen.iphone4
-          frame [[20,300],[250,100]] if BaseScreen.iphone5
-          frame [[20,370],[305,100]] if BaseScreen.iphone6
-          frame [[20,370],[305,100]] if BaseScreen.iphone6plus
-          text I18n.t("ledgers.label_empty")
+          top 250 if BaseScreen.iphone4
+          top 300 if BaseScreen.iphone5
+          top 370 if BaseScreen.iphone6
+          top 370 if BaseScreen.iphone6plus
+          text I18n.t("attachments.message_empty")
         end
       end
     end

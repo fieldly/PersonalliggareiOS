@@ -5,10 +5,13 @@ class LedgersDetailsLayout < MK::Layout
   view :line_1
   view :line_2
   view :line_3
+  view :line_4
   
   view :icon_authority
   view :icon_emergency
   view :icon_attachments
+
+  view :date
 
   view :buttons
   view :button_checkin
@@ -114,6 +117,33 @@ class LedgersDetailsLayout < MK::Layout
           text I18n.t("ledgers.label_actions")
         end
       end
+    end
+
+    @date = add UIView, :box do
+      frame [[0,360],[320,95]] if BaseScreen.iphone4
+      frame [[0,450],[320,95]] if BaseScreen.iphone5
+      frame [[0,432],[380,95]] if BaseScreen.iphone6
+      frame [[0,618],[380,95]] if BaseScreen.iphone6plus
+      add UIView, :box_top
+      add UIView, :box_single_line do
+        frame [[15,20],[290,45]] if BaseScreen.iphone4
+        frame [[15,20],[290,45]] if BaseScreen.iphone5
+        frame [[15,20],[345,45]] if BaseScreen.iphone6
+        frame [[15,20],[385,45]] if BaseScreen.iphone6plus
+        @line_4 = add UILabel, :box_line_3_label do
+          text "Construction Curt Inc"
+        end
+      end
+      @bottom_box = add UIView, :box_bottom do
+        frame [[15,65],[290,32]] if BaseScreen.iphone4
+        frame [[15,65],[290,32]] if BaseScreen.iphone5
+        frame [[15,65],[345,32]] if BaseScreen.iphone6
+        frame [[15,65],[385,32]] if BaseScreen.iphone6plus
+        add UILabel, :box_bottom_label do
+          text I18n.t("ledgers.label_timestamp")
+        end
+      end
+      hidden true
     end
 
     @buttons = add UIView, :box_buttons do

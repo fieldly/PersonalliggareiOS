@@ -52,5 +52,17 @@
 "ledgers.label_attachments" = "Documents";
 "ledgers.label_worksite" = "Work site";
 "ledgers.label_actions" = "Actions";
+"ledgers.label_timestamp" = "Checkin time";
+"ledgers.label_site_number" = "Skatteverkets ID-number";
+"ledgers.label_info" = "Enter the ID number that is registered on this staff ledge in the field above. When you do this, then a message is sent to the registered The email. Follow the link in the message.";
+"ledgers.label_code_info" = "You have now received an e-mail message. Visit the link in the email and enter the code above to access the personnel ledger. Remember to enter it exactly.";
+"ledgers.label_code" = "Verification code";
+"ledgers.label_missing_fields" = "Enter Skatteverkets ID-number";
 "ledgers.label_checkin" = "I AM HERE";
 "ledgers.label_checkout" = "I AM LEAVING";
+"ledgers.label_empty" = "There are no ledgers";
+"ledgers.button_fetch" = "FETCH LEDGER";
+"attachments.heading" = "Attachments";
+"attachments.heading_show" = "Show page";
+"attachments.message_empty" = "There are no attachments";
+"attachments.label_archive" = "Available attachments";

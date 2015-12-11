@@ -35,4 +35,31 @@ schema "0001 initial" do
 
   end
 
+  entity "LedgerEntry" do
+
+    integer32 :id
+    integer32 :remote_id
+    integer32 :backend_user_id
+    integer32 :ledger_id
+    string    :status
+    datetime  :created_at
+
+  end
+
+  entity "Attachment" do
+
+    integer32 :id
+    integer32 :account_id
+    integer32 :remote_id
+    integer32 :attachable_id
+    string    :attachable_type
+    string    :title
+    string    :filename
+    string    :filetype
+    string    :filesize
+    string    :fileurl
+    datetime  :created_at
+
+  end
+
 end

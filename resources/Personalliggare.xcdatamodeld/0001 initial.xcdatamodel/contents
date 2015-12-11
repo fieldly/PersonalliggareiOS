@@ -29,4 +29,25 @@
     <attribute optional="YES" syncable="YES" attributeType="Date" name="starts_at"/>
     <attribute optional="YES" syncable="YES" attributeType="Date" name="ends_at"/>
   </entity>
+  <entity name="LedgerEntry" syncable="YES" representedClassName="LedgerEntry">
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="remote_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="backend_user_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="ledger_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="status"/>
+    <attribute optional="YES" syncable="YES" attributeType="Date" name="created_at"/>
+  </entity>
+  <entity name="Attachment" syncable="YES" representedClassName="Attachment">
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="account_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="remote_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="attachable_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="attachable_type"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="title"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="filename"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="filetype"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="filesize"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="fileurl"/>
+    <attribute optional="YES" syncable="YES" attributeType="Date" name="created_at"/>
+  </entity>
 </model>

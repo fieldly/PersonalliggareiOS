@@ -36,7 +36,7 @@ class LedgersScreen < BaseScreen
     @table = @layout.table
     @table.delegate = self
     @table.dataSource = self
-    @table.tableHeaderView = create_table_info_header text: I18n.t("ledgers.label_click_to_select")
+    @table.tableHeaderView = create_table_header_small text: I18n.t("ledgers.label_click_to_select")
 
     create_refresh
 
@@ -46,7 +46,7 @@ class LedgersScreen < BaseScreen
 
   def setup_observers
 
-    @update_projects_observer = App.notification_center.observe "updateTableProjects" do |notification|
+    @update_projects_observer = App.notification_center.observe "updateTableLedgers" do |notification|
 
       table_data_check
 
@@ -107,7 +107,7 @@ class LedgersScreen < BaseScreen
 
     if @ledgers.count > 0
 
-      @table.tableHeaderView = create_table_info_header text: I18n.t("ledgers.label_click_to_select")
+      @table.tableHeaderView = create_table_header_small text: I18n.t("ledgers.label_click_to_select")
 
     else
 
@@ -141,7 +141,7 @@ class LedgersScreen < BaseScreen
 
               if @ledgers.count > 0
 
-                @table.tableHeaderView = create_table_info_header text: I18n.t("ledgers.label_click_to_select")
+                @table.tableHeaderView = create_table_header_small text: I18n.t("ledgers.label_click_to_select")
 
               else
 

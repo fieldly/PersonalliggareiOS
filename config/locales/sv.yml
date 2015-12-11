@@ -61,7 +61,20 @@ sv:
     label_attachments: Dokument
     label_worksite: Arbetsplats
     label_actions: Åtgärder
+    label_timestamp: Incheckningstid
+    label_site_number: Skatteverkets ID-nummer
+    label_info: Ange det ID-nummer som är registrerat på denna personalliggare i fältet ovan. När du gör detta så kommer ett meddelande skickas till den registrerade epostaddressen. Följ länken i meddelandet.
+    label_code_info: Du har nu fått ett epostmeddelande. Besök länken i meddelandet och ange koden ovan för att komma åt personalliggaren. Kom ihåg att ange den exakt.
+    label_code: Verifikationskod
+    label_missing_fields: Ange Skatteverkets ID-nummer
+    label_empty: Det finns inga liggare
     label_checkin: JAG ÄR PÅ PLATSEN
     label_checkout: JAG LÄMNAR PLATSEN
+    button_fetch: HÄMTA PERSONALLIGARE
+  attachments:
+    heading: Dokument
+    heading_show: Visa sida
+    label_archive: Tillgängliga dokument
+    message_empty: Det finns inga dokument
 
     

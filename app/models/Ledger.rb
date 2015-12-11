@@ -92,4 +92,30 @@ class Ledger < CDQManagedObject
 
   end
 
+  def self.fetch_entries(ledger, code, message, &callback)
+
+    data = {access_token: Base.access_token, code: code}
+
+    AFMotion::HTTP.get("#{Base.base_url}ledgers/#{ledger}", data) do |result|
+
+      if result.success?
+
+        object = BW::JSON.parse result.object
+
+        Notifier.dismiss if message
+
+        callback.call(true, object['code'])
+
+      elsif result.failure?
+
+        code = result.operation.response.blank? ? 0 : result.operation.response.statusCode
+
+        callback.call(false, code)
+
+      end
+
+    end
+
+  end
+
 end

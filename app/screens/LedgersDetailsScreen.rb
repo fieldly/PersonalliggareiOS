@@ -23,6 +23,7 @@ class LedgersDetailsScreen < BaseScreen
     @layout = LedgersDetailsLayout.new(root: self.view).build
 
     @data = Ledger.where(:id).eq(@ledger_id).first
+    @entry = LedgerEntry.where(:ledger_id).eq(@ledger_id).last
 
     Base.save_coordinates
 
@@ -36,15 +37,13 @@ class LedgersDetailsScreen < BaseScreen
 
     @layout.icon_authority.when_tapped do
 
-      #open ContactsScreen.new nav_bar: true, assignable_id: @data.id, assignable_type: "Project"
-
-      p "Authority"
+      open AuthorityScreen.new nav_bar: true, ledger_id: @ledger_id
 
     end
 
     @layout.icon_emergency.when_tapped do
 
-      #open AttachmentsScreen.new nav_bar: true, attachable_id: @data.id, attachable_type: "Project"
+      #open EmergencyScreen.new nav_bar: true, ledger_id: @ledger_id
 
       p "Emergency"
 
@@ -52,9 +51,7 @@ class LedgersDetailsScreen < BaseScreen
 
     @layout.icon_attachments.when_tapped do
 
-      #open AttachmentsScreen.new nav_bar: true, attachable_id: @data.id, attachable_type: "Project"
-
-      p "Attachments"
+      open AttachmentsScreen.new nav_bar: true, attachable_id: @data.id, attachable_type: "Project"
 
     end
 
@@ -78,6 +75,46 @@ class LedgersDetailsScreen < BaseScreen
     @layout.line_2.setText(set_value(@data.location))
     @layout.line_3.setText(set_value(@data.site_id_number))
 
+    if @entry
+
+      if @entry.status == "in"
+
+        @layout.button_checkin.hidden = true
+        @layout.button_checkout.hidden = false
+        @layout.date.hidden = false
+
+      elsif @entry.status == "out"
+
+        @layout.button_checkin.hidden = false
+        @layout.button_checkout.hidden = true
+        @layout.date.hidden = true
+
+      end
+
+    else
+
+        @layout.button_checkin.hidden = false
+        @layout.button_checkout.hidden = true
+        @layout.date.hidden = true
+
+    end
+
+  end
+
+  def save_to_database(id, status)
+
+    entry = Hash.new
+
+    entry['remote_id'] = id
+    entry['backend_user_id'] = Base.user_data.id
+    entry['ledger_id'] = @ledger_id
+    entry['status'] = status
+    entry['created_at'] = Time.now
+
+    LedgerEntry.create(entry)
+
+    cdq.save
+
   end
 
   def checkin
@@ -100,8 +137,13 @@ class LedgersDetailsScreen < BaseScreen
 
               @running = false
 
+              @layout.line_4.setText(Time.now.strftime('%Y-%m-%d %H:%M').to_s)
+
               @layout.button_checkin.hidden = true
               @layout.button_checkout.hidden = false
+              @layout.date.hidden = false
+
+              save_to_database(1, "in")
 
             end
 
@@ -135,6 +177,9 @@ class LedgersDetailsScreen < BaseScreen
 
               @layout.button_checkin.hidden = false
               @layout.button_checkout.hidden = true
+              @layout.date.hidden = true
+
+              save_to_database(1, "out")
 
             end
 

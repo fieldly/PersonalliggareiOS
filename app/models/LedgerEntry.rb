@@ -1,0 +1,3 @@
+class LedgerEntry < CDQManagedObject
+
+end

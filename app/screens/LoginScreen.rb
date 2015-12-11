@@ -57,6 +57,8 @@ class LoginScreen < BaseScreen
 
             clear_database
 
+            App.notification_center.post "updateTableLedgers"
+
             self.dismissModalViewControllerAnimated(true)
 
           when false

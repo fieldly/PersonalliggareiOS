@@ -61,6 +61,19 @@ en:
     label_attachments: Documents
     label_worksite: Work site
     label_actions: Actions
+    label_timestamp: Checkin time
+    label_site_number: Skatteverkets ID-number
+    label_info: "Enter the ID number that is registered on this staff ledge in the field above. When you do this, then a message is sent to the registered The email. Follow the link in the message."
+    label_code_info: You have now received an e-mail message. Visit the link in the email and enter the code above to access the personnel ledger. Remember to enter it exactly.
+    label_code: Verification code
+    label_missing_fields: Enter Skatteverkets ID-number
     label_checkin: I AM HERE
     label_checkout: I AM LEAVING
+    label_empty: There are no ledgers
+    button_fetch: FETCH LEDGER
+  attachments:
+    heading: Attachments
+    heading_show: Show page
+    message_empty: There are no attachments
+    label_archive: Available attachments
 
