@@ -58,9 +58,13 @@
 "ledgers.label_code_info" = "You have now received an e-mail message. Visit the link in the email and enter the code above to access the personnel ledger. Remember to enter it exactly.";
 "ledgers.label_code" = "Verification code";
 "ledgers.label_missing_fields" = "Enter Skatteverkets ID-number";
+"ledgers.label_dialog_title" = "Message";
+"ledgers.label_dialog_message_logout" = "Do you really want to logout? If you do you have to login again at a later time.";
+"ledgers.label_dialog_yes" = "true";
+"ledgers.label_dialog_no" = "false";
+"ledgers.label_empty" = "There are no ledgers";
 "ledgers.label_checkin" = "I AM HERE";
 "ledgers.label_checkout" = "I AM LEAVING";
-"ledgers.label_empty" = "There are no ledgers";
 "ledgers.button_fetch" = "FETCH LEDGER";
 "attachments.heading" = "Attachments";
 "attachments.heading_show" = "Show page";

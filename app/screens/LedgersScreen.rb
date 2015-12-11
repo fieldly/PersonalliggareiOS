@@ -6,7 +6,7 @@ class LedgersScreen < BaseScreen
 
     @ledgers ||= []
 
-    create_nav_button_plain :action => 'logout', :position => 'right', :label => "", :size => 19
+    create_nav_button_plain :action => 'logout_alert', :position => 'right', :label => "", :size => 19
 
   end
 
@@ -278,6 +278,20 @@ class LedgersScreen < BaseScreen
     @ledgers = Ledger.sort_by(:title, :ascending)
     @ledgers
     
+  end
+
+  def logout_alert
+
+    UIAlertView.alert(I18n.t("ledgers.label_dialog_title"), message: I18n.t("ledgers.label_dialog_message_logout"), buttons: [I18n.t("ledgers.label_dialog_no"), I18n.t("ledgers.label_dialog_yes")]) do |button, button_index|
+      
+      if button == I18n.t("ledgers.label_dialog_yes")
+
+        logout
+
+      end
+
+    end
+
   end
 
   def logout

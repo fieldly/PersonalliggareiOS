@@ -58,6 +58,10 @@
 "ledgers.label_code_info" = "Du har nu fått ett epostmeddelande. Besök länken i meddelandet och ange koden ovan för att komma åt personalliggaren. Kom ihåg att ange den exakt.";
 "ledgers.label_code" = "Verifikationskod";
 "ledgers.label_missing_fields" = "Ange Skatteverkets ID-nummer";
+"ledgers.label_dialog_title" = "Meddelande";
+"ledgers.label_dialog_message_logout" = "Vill du verkligen logga ut? Om du gör detta så måste du logga in igen senare.";
+"ledgers.label_dialog_yes" = "Ja";
+"ledgers.label_dialog_no" = "Nej";
 "ledgers.label_empty" = "Det finns inga liggare";
 "ledgers.label_checkin" = "JAG ÄR PÅ PLATSEN";
 "ledgers.label_checkout" = "JAG LÄMNAR PLATSEN";

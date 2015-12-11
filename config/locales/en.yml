@@ -67,9 +67,13 @@ en:
     label_code_info: You have now received an e-mail message. Visit the link in the email and enter the code above to access the personnel ledger. Remember to enter it exactly.
     label_code: Verification code
     label_missing_fields: Enter Skatteverkets ID-number
+    label_dialog_title: "Message"
+    label_dialog_message_logout: "Do you really want to logout? If you do you have to login again at a later time."
+    label_dialog_yes: Yes
+    label_dialog_no: No
+    label_empty: There are no ledgers
     label_checkin: I AM HERE
     label_checkout: I AM LEAVING
-    label_empty: There are no ledgers
     button_fetch: FETCH LEDGER
   attachments:
     heading: Attachments
