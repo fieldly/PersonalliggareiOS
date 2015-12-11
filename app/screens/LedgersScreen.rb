@@ -6,7 +6,7 @@ class LedgersScreen < BaseScreen
 
     @ledgers ||= []
 
-    create_nav_button_plain :action => 'logout', :position => 'right', :label => "", :size => 19
+    create_nav_button_plain :action => 'logout', :position => 'right', :label => "", :size => 19
 
   end
 
