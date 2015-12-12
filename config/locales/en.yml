@@ -55,6 +55,7 @@ en:
   ledgers:
     heading: Digital ledgers
     heading_details: Digital ledgers
+    heading_authority: Skatteverket
     label_click_to_select: Click to select
     label_authority: Skatteverket
     label_emergency: Emergency

@@ -55,6 +55,7 @@ sv:
   ledgers:
     heading: Personalliggare
     heading_details: Personalliggare
+    heading_authority: Skatteverket
     label_click_to_select: Klicka för att välja
     label_authority: Skatteverket
     label_emergency: NÖDLISTA

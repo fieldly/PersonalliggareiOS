@@ -2,7 +2,7 @@ class AuthorityScreen < BaseScreen
 
   attr_accessor :ledger_id
 
-  title I18n.t("ledgers.heading_details")
+  title I18n.t("ledgers.heading_authority")
 
   def on_load
 
