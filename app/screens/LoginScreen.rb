@@ -58,7 +58,6 @@ class LoginScreen < BaseScreen
             clear_database
 
             App.notification_center.post "updateTableLedgers"
-            App.notification_center.post "updateLocation"
 
             if get_data("activated_location")
 

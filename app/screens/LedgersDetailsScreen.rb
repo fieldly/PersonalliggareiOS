@@ -30,8 +30,6 @@ class LedgersDetailsScreen < BaseScreen
 
     @data = Ledger.where(:id).eq(@ledger_id).first
 
-    Base.save_coordinates
-
     setup_entry
 
     setup_actions
@@ -215,8 +213,6 @@ class LedgersDetailsScreen < BaseScreen
   end
 
   def close_window
-
-    BW::Location.stop
 
     close
     

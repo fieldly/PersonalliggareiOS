@@ -16,6 +16,8 @@ class LedgersScreen < BaseScreen
 
     open_modal LoginScreen.new nav_bar: true if @user == 0
 
+    Base.save_coordinates
+
   end
 
   def will_appear
@@ -28,7 +30,6 @@ class LedgersScreen < BaseScreen
   def will_dismiss
 
     App.notification_center.unobserve @update_projects_observer
-    App.notification_center.unobserve @update_location_observer
 
   end
 
@@ -52,12 +53,6 @@ class LedgersScreen < BaseScreen
     @update_projects_observer = App.notification_center.observe "updateTableLedgers" do |notification|
 
       table_data_check
-
-    end
-
-    @update_location_observer = App.notification_center.observe "updateLocation" do |notification|
-
-      Base.save_coordinates
 
     end
 
