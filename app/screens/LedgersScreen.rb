@@ -28,14 +28,13 @@ class LedgersScreen < BaseScreen
   def will_dismiss
 
     App.notification_center.unobserve @update_projects_observer
+    App.notification_center.unobserve @update_location_observer
 
   end
 
   def setup_layout
 
     @layout = LedgersLayout.new(root: self.view).build
-
-    Base.save_coordinates
 
     @table = @layout.table
     @table.delegate = self
@@ -53,6 +52,12 @@ class LedgersScreen < BaseScreen
     @update_projects_observer = App.notification_center.observe "updateTableLedgers" do |notification|
 
       table_data_check
+
+    end
+
+    @update_location_observer = App.notification_center.observe "updateLocation" do |notification|
+
+      Base.save_coordinates
 
     end
 
