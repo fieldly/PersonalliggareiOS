@@ -362,4 +362,31 @@ module GeneralStyles
     height 50
   end
 
+  def message_style
+    hidden false
+  end
+
+  def message_background_style
+    background_color "#ffffff".uicolor
+    layer do
+      corner_radius 3.0
+    end
+  end
+
+  def message_image_style
+    image "body/man_thumbs.png".uiimage
+  end
+
+  def message_label_style
+    text "empty"
+    text_color "#333333".uicolor
+    text_alignment UITextAlignmentCenter
+    font UIFont.boldSystemFontOfSize(14)
+    size_to_fit
+    number_of_lines 0
+    top 310
+    width 345 if BaseScreen.iphone6
+    width 280 unless BaseScreen.iphone6
+  end
+
 end

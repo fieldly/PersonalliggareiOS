@@ -2,9 +2,9 @@ class Ledger < CDQManagedObject
 
   Notifier = Motion::Blitz
 
-  def self.fetch_content(message, &callback)
+  def self.fetch_content(latitude, longitude, message, &callback)
 
-    data = {access_token: Base.access_token}
+    data = {access_token: Base.access_token, latitude: latitude, longitude: longitude}
 
     Notifier.show(I18n.t("loading.fetching"), :gradient) if message
 

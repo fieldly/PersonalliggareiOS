@@ -8,7 +8,7 @@ class LedgersDetailsScreen < BaseScreen
 
     @workorders ||= []
 
-    create_nav_button_plain :action => 'close', :position => 'left', :label => "", :size => 18
+    create_nav_button_plain :action => 'close_window', :position => 'left', :label => "", :size => 18
  
   end
 
@@ -212,6 +212,14 @@ class LedgersDetailsScreen < BaseScreen
 
     end
 
+  end
+
+  def close_window
+
+    BW::Location.stop
+
+    close
+    
   end
 
 end

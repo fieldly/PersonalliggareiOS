@@ -35,6 +35,8 @@ class LedgersScreen < BaseScreen
 
     @layout = LedgersLayout.new(root: self.view).build
 
+    Base.save_coordinates
+
     @table = @layout.table
     @table.delegate = self
     @table.dataSource = self
@@ -133,7 +135,7 @@ class LedgersScreen < BaseScreen
 
       when true
 
-        Ledger.fetch_content(true) do |success, response|
+        Ledger.fetch_content(get_data("latitude"), get_data("longitude"), true) do |success, response|
 
           case success
 

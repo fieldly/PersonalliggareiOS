@@ -52,6 +52,10 @@ en:
     placeholder_password: Click here to enter your password
     button_login: LOGIN
     message_missing_fields: Enter both fields
+  login_setup:
+    heading_location: "Activate location"
+    message_location: "Click below to activate locations"
+    button_activate_location: "ACTIVATE LOCATIONS"
   ledgers:
     heading: Digital ledgers
     heading_details: Digital ledgers

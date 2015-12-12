@@ -44,6 +44,9 @@
 "login.placeholder_password" = "Click here to enter your password";
 "login.button_login" = "LOGIN";
 "login.message_missing_fields" = "Enter both fields";
+"login_setup.heading_location" = "Activate location";
+"login_setup.message_location" = "Click below to activate locations";
+"login_setup.button_activate_location" = "ACTIVATE LOCATIONS";
 "ledgers.heading" = "Digital ledgers";
 "ledgers.heading_details" = "Digital ledgers";
 "ledgers.heading_authority" = "Skatteverket";

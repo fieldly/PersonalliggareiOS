@@ -59,7 +59,15 @@ class LoginScreen < BaseScreen
 
             App.notification_center.post "updateTableLedgers"
 
-            self.dismissModalViewControllerAnimated(true)
+            if get_data("activated_location")
+
+              self.dismissModalViewControllerAnimated(true)
+
+            else
+
+              open LoginSetupLocationScreen.new nav_bar: true
+
+            end
 
           when false
 

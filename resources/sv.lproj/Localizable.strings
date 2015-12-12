@@ -44,6 +44,9 @@
 "login.placeholder_password" = "Klicka här för att lägga till lösenord";
 "login.button_login" = "LOGGA IN";
 "login.message_missing_fields" = "Alla fält markerade med * är obligatoriska";
+"login_setup.heading_location" = "Aktivera platser";
+"login_setup.message_location" = "Klicka nedan för att aktivera platser";
+"login_setup.button_activate_location" = "AKTIVERA PLATSER";
 "ledgers.heading" = "Personalliggare";
 "ledgers.heading_details" = "Personalliggare";
 "ledgers.heading_authority" = "Skatteverket";

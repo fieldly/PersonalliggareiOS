@@ -52,6 +52,10 @@ sv:
     placeholder_password: Klicka här för att lägga till lösenord
     button_login: LOGGA IN
     message_missing_fields: Alla fält markerade med * är obligatoriska
+  login_setup:
+    heading_location: "Aktivera platser"
+    message_location: "Klicka nedan för att aktivera platser"
+    button_activate_location: "AKTIVERA PLATSER"
   ledgers:
     heading: Personalliggare
     heading_details: Personalliggare
