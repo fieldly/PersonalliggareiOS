@@ -33,6 +33,9 @@ class LoginScreen < BaseScreen
 
   def login
 
+    @layout.textfield_email.resignFirstResponder
+    @layout.textfield_password.resignFirstResponder
+
     unless @running
 
       @running = true
@@ -61,7 +64,11 @@ class LoginScreen < BaseScreen
 
             if get_data("activated_location")
 
-              self.dismissModalViewControllerAnimated(true)
+              1.second.later do
+
+                self.dismissModalViewControllerAnimated(true)
+
+              end
 
             else
 
