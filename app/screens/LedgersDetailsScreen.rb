@@ -42,7 +42,7 @@ class LedgersDetailsScreen < BaseScreen
 
   def setup_entry
 
-    @entry = LedgerEntry.where(:ledger_id).eq(@ledger_id).last
+    @entry = LedgerEntry.where(:ledger_id).eq(@ledger_id).sort_by(:created_at, :ascending).last
     
   end
 
