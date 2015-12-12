@@ -58,37 +58,6 @@ class LedgersScreen < BaseScreen
 
   end
 
-  def textFieldDidBeginEditing(textField)
-
-    @textfield.text = nil
-
-    set_keywords
-
-  end
-
-  def textFieldShouldReturn(textfield)
-
-    @textfield.resignFirstResponder
-
-  end
-
-  def textField(textField, shouldChangeCharactersInRange:range, replacementString:string)
-
-    set_keywords
-    
-  end
-
-  def set_keywords
-    
-    @keywords = @textfield.text
-    @keywords = @keywords.downcase if @keywords.present?
-
-    filter_query
-
-    @table.reloadData
-    
-  end
-
   def table_data_check
 
     data = filter_query
