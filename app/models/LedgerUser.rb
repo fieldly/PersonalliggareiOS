@@ -16,9 +16,9 @@ class LedgerUser < CDQManagedObject
 
     p Base.access_token
 
-    p "#{Base.base_url}ledgers/#{ledger}/ledgers_entries"
+    p "#{Base.base_url}ledgers/#{ledger}/employees"
 
-    AFMotion::HTTP.get("#{Base.base_url}ledgers/#{ledger}/ledgers_entries", data) do |result|
+    AFMotion::HTTP.get("#{Base.base_url}ledgers/#{ledger}/employees", data) do |result|
 
       Notifier.dismiss if message
 
@@ -38,14 +38,14 @@ class LedgerUser < CDQManagedObject
 
             user = Hash.new
 
-            user['id'] = 1
-            user['account_id'] = 1
-            user['fullname'] = "Patrik Andersson"
-            user['email'] = "patrik@fieldly.com"
-            user['phone'] = "123456"
+            user['id'] = attributes["backend_user"]["id"]
+            user['account_id'] = attributes["backend_user"]["account_id"]
+            user['fullname'] = attributes["backend_user"]["fullname"]
+            user['email'] = attributes["backend_user"]["email"]
+            user['phone'] = attributes["backend_user"]["phone"]
             user['activated'] = false
-            user['status'] = "in"
-            user['created_at'] = Time.now
+            user['status'] = attributes["backend_user"]["ledger_status"]
+            user['created_at'] = Base.create_date_from_server_utc(attributes["backend_user"]["created_at"])
 
             output << LedgerUser.create(user)
 
