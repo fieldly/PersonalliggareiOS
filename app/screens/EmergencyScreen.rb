@@ -209,7 +209,7 @@ class EmergencyScreen < BaseScreen
 
   def filter_query
 
-    @users = LedgerUser.sort_by(:fullname, :ascending)
+    @users = LedgerUser.sort_by(:fullname, :ascending).sort_by(:status, :ascending)
     @users
     
   end
