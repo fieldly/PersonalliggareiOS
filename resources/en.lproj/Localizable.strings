@@ -67,6 +67,7 @@
 "ledgers.label_dialog_yes" = "true";
 "ledgers.label_dialog_no" = "false";
 "ledgers.label_empty" = "There are no ledgers";
+"ledgers.label_empty_entries" = "There are no users";
 "ledgers.label_checkin" = "I AM HERE";
 "ledgers.label_checkout" = "I AM LEAVING";
 "ledgers.button_fetch" = "FETCH LEDGER";

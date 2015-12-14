@@ -67,6 +67,7 @@
 "ledgers.label_dialog_yes" = "Ja";
 "ledgers.label_dialog_no" = "Nej";
 "ledgers.label_empty" = "Det finns inga liggare";
+"ledgers.label_empty_entries" = "Det finns inga medarbetare";
 "ledgers.label_checkin" = "JAG ÄR PÅ PLATSEN";
 "ledgers.label_checkout" = "JAG LÄMNAR PLATSEN";
 "ledgers.button_fetch" = "HÄMTA PERSONALLIGARE";

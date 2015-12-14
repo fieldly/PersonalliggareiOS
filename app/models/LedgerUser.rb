@@ -14,7 +14,11 @@ class LedgerUser < CDQManagedObject
 
     end
 
-    AFMotion::HTTP.get("#{Base.base_url}ledgers", data) do |result|
+    p Base.access_token
+
+    p "#{Base.base_url}ledgers/#{ledger}/ledgers_entries"
+
+    AFMotion::HTTP.get("#{Base.base_url}ledgers/#{ledger}/ledgers_entries", data) do |result|
 
       Notifier.dismiss if message
 
@@ -30,7 +34,7 @@ class LedgerUser < CDQManagedObject
 
           users.each { |user| user.destroy }
 
-          object["ledgers"].each do |attributes|
+          object["backend_users"].each do |attributes|
 
             user = Hash.new
 

@@ -77,6 +77,7 @@ sv:
     label_dialog_yes: Ja
     label_dialog_no: Nej
     label_empty: Det finns inga liggare
+    label_empty_entries: Det finns inga medarbetare
     label_checkin: JAG ÄR PÅ PLATSEN
     label_checkout: JAG LÄMNAR PLATSEN
     button_fetch: HÄMTA PERSONALLIGARE

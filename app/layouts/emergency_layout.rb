@@ -33,7 +33,7 @@ class EmergencyLayout < MK::Layout
           top 300 if BaseScreen.iphone5
           top 370 if BaseScreen.iphone6
           top 370 if BaseScreen.iphone6plus
-          text I18n.t("projects.label_empty")
+          text I18n.t("ledgers.label_empty_entries")
         end
       end
     end
