@@ -127,7 +127,6 @@ class LedgersDetailsScreen < BaseScreen
     entry = Hash.new
 
     entry['remote_id'] = id
-    entry['backend_user_id'] = Base.user_data.id
     entry['ledger_id'] = @ledger_id
     entry['status'] = status
     entry['created_at'] = Time.now

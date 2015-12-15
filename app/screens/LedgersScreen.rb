@@ -270,6 +270,18 @@ class LedgersScreen < BaseScreen
     users = BackendUser.all
     users.each { |user| user.destroy }
 
+    ledgers = Ledger.all
+    ledgers.each { |ledger| ledger.destroy }
+
+    ledger_entries = LedgerEntry.all
+    ledger_entries.each { |ledger_entry| ledger_entry.destroy }
+
+    ledger_users = LedgerUser.all
+    ledger_users.each { |ledger_user| ledger_user.destroy }
+
+    attachments = Attachment.all
+    attachments.each { |attachment| attachment.destroy }
+
     cdq.save
 
     open_modal LoginScreen.new nav_bar: true

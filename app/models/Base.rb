@@ -390,8 +390,8 @@
 
   def self.base_url
 
-    #"https://fieldly.com/api/v2/"
-    "http://qa.fieldly.com/api/v2/"
+    "https://fieldly.com/api/v2/"
+    #"http://qa.fieldly.com/api/v2/"
 
   end
 
