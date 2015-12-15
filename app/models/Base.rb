@@ -390,8 +390,14 @@
 
   def self.base_url
 
+<<<<<<< HEAD
     "https://fieldly.com/api/v2/"
     #"http://qa.fieldly.com/api/v2/"
+=======
+    #"https://fieldly.com/api/v2/"
+    # "http://qa.fieldly.com/api/v2/"
+    "http://201e3193.ngrok.io/api/v2/"
+>>>>>>> origin/master
 
   end
 
