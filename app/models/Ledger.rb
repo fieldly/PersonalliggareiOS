@@ -38,7 +38,6 @@ class Ledger < CDQManagedObject
             ledger['title'] = attributes["ledger"]["title"]
             ledger['location'] = attributes["ledger"]["location"]
             ledger['site_id_number'] = attributes["ledger"]["site_id_number"]
-            ledger['backend_user_id'] = attributes["ledger"]["backend_user_id"]
             ledger['starts_at'] = Base.create_date_from_server_utc(attributes["ledger"]["starts_at"])
             ledger['ends_at'] = Base.create_date_from_server_utc(attributes["ledger"]["ends_at"])
 

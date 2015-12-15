@@ -44,7 +44,15 @@ class AuthorityScreen < BaseScreen
 
     if @layout.textfield.text.present?
 
-      fetch_ledger
+      if @data.site_id_number.downcase == @layout.textfield.text.downcase
+
+        fetch_ledger
+
+      else
+
+        App.alert(I18n.t("ledgers.label_do_not_match"))
+
+      end
 
     else
 

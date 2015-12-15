@@ -72,6 +72,7 @@ sv:
     label_code_info: Du har nu fått ett epostmeddelande. Besök länken i meddelandet och ange koden ovan för att komma åt personalliggaren. Kom ihåg att ange den exakt.
     label_code: Verifikationskod
     label_missing_fields: Ange Skatteverkets ID-nummer
+    label_do_not_match: ID-numret är inte korrekt
     label_dialog_title: "Meddelande"
     label_dialog_message_logout: "Vill du verkligen logga ut? Om du gör detta så måste du logga in igen senare."
     label_dialog_yes: Ja

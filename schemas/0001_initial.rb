@@ -39,7 +39,6 @@ schema "0001 initial" do
 
     integer32 :id
     integer32 :remote_id
-    integer32 :backend_user_id
     integer32 :ledger_id
     string    :status
     datetime  :created_at
