@@ -32,7 +32,6 @@
   <entity name="LedgerEntry" syncable="YES" representedClassName="LedgerEntry">
     <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="id" defaultValueString="0"/>
     <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="remote_id" defaultValueString="0"/>
-    <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="backend_user_id" defaultValueString="0"/>
     <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="ledger_id" defaultValueString="0"/>
     <attribute optional="YES" syncable="YES" attributeType="String" name="status"/>
     <attribute optional="YES" syncable="YES" attributeType="Date" name="created_at"/>

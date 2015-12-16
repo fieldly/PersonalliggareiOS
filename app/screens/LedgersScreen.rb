@@ -18,6 +18,8 @@ class LedgersScreen < BaseScreen
 
     Base.save_coordinates
 
+    table_data_check unless @user == 0
+
   end
 
   def will_appear
@@ -43,8 +45,6 @@ class LedgersScreen < BaseScreen
     @table.tableHeaderView = create_table_header_small text: I18n.t("ledgers.label_click_to_select")
 
     create_refresh
-
-    table_data_check unless @user == 0
 
   end
 

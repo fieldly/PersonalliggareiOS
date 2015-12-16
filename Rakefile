@@ -9,9 +9,9 @@ rescue LoadError
 end
 
 Motion::Project::App.setup do |app|
-  app.name = 'Fieldly'
+  app.name = 'Fieldly PL'
   app.version = "1.0.0"
-  app.short_version = "1.0.0"
+  app.short_version = "1.0.2"
   app.deployment_target = '7.0'
   app.device_family = [:iphone]
   app.icons = Dir.glob("resources/Icon*.png").map{|icon| icon.split("/").last}
@@ -27,18 +27,18 @@ Motion::Project::App.setup do |app|
     app.provisioning_profile = '/Users/danielkrusenstrahle/Documents/certs/fieldly/development/FieldlyDeveloper.mobileprovision'
     app.codesign_certificate = 'iPhone Developer: Daniel Krusenstraehle (97E74V8P2W)'
     app.entitlements['aps-environment'] = 'development'
-    app.info_plist['CFBundleURLTypes'] = [{'CFBundleURLName' => 'com.fieldly.app', 'CFBundleURLSchemes' => ['fieldly'] }]
+    app.info_plist['CFBundleURLTypes'] = [{'CFBundleURLName' => 'com.fieldly.app', 'CFBundleURLSchemes' => ['fieldlypersonalliggare'] }]
 
   end
 
   app.release do
 
     app.entitlements['get-task-allow'] = false
-    app.identifier = 'com.fieldly.prod'
-    app.provisioning_profile = '/Users/danielkrusenstrahle/Documents/certs/fieldly/production/FieldlyProduction.mobileprovision'
+    app.identifier = 'com.fieldly.personalliggare'
+    app.provisioning_profile = '/Users/danielkrusenstrahle/Documents/certs/fieldly/production/Fieldly__Personalliggare.mobileprovision'
     app.codesign_certificate = 'iPhone Distribution: Daniel Krusenstraehle (N2TXAFJTQC)'
     app.entitlements['aps-environment'] = 'production'
-    app.info_plist['CFBundleURLTypes'] = [{'CFBundleURLName' => 'com.fieldly.prod', 'CFBundleURLSchemes' => ['fieldly'] }]
+    app.info_plist['CFBundleURLTypes'] = [{'CFBundleURLName' => 'com.fieldly.personalliggare', 'CFBundleURLSchemes' => ['fieldlypersonalliggare'] }]
 
   end
   app.info_plist['UIStatusBarStyle'] = "UIStatusBarStyleLightContent"
