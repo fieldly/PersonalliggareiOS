@@ -42,7 +42,7 @@ class AuthorityScreen < BaseScreen
 
     @layout.textfield.resignFirstResponder
 
-    if @layout.textfield.text.present?
+    if @layout.textfield.text.present? && @layout.textfield_email.text.present?
 
       if @data.site_id_number.downcase == @layout.textfield.text.downcase
 
@@ -76,7 +76,7 @@ class AuthorityScreen < BaseScreen
 
         when true
 
-          Ledger.send_to_authorities(@data.id, @layout.textfield.text, true) do |result, code|
+          Ledger.send_to_authorities(@data.id, @layout.textfield.text, @layout.textfield_email.text, true) do |result, code|
 
             if result
 

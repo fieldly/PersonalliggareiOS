@@ -67,9 +67,9 @@ class Ledger < CDQManagedObject
 
   end
 
-  def self.send_to_authorities(ledger, code, message, &callback)
+  def self.send_to_authorities(ledger, code, email, message, &callback)
 
-    data = {access_token: Base.access_token, code: code}
+    data = {access_token: Base.access_token, code: code, email: email}
 
     Notifier.show(I18n.t("loading.fetching"), :gradient) if message
 

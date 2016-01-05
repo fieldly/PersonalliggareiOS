@@ -58,6 +58,7 @@
 "ledgers.label_actions" = "Åtgärder";
 "ledgers.label_timestamp" = "Incheckningstid";
 "ledgers.label_site_number" = "Skatteverkets ID-nummer";
+"ledgers.label_email" = "Epostadress";
 "ledgers.label_info" = "Ange det ID-nummer som är registrerat på denna personalliggare i fältet ovan. När du gör detta så kommer ett meddelande skickas till den registrerade epostaddressen. Följ länken i meddelandet.";
 "ledgers.label_code_info" = "Du har nu fått ett epostmeddelande. Besök länken i meddelandet och ange koden ovan för att komma åt personalliggaren. Kom ihåg att ange den exakt.";
 "ledgers.label_code" = "Verifikationskod";
