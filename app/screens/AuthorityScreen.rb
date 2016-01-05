@@ -24,6 +24,9 @@ class AuthorityScreen < BaseScreen
 
     @data = Ledger.where(:id).eq(@ledger_id).first
 
+    @layout.textfield.delegate = self
+    @layout.textfield_email.delegate = self
+
     setup_actions
 
   end
@@ -95,6 +98,37 @@ class AuthorityScreen < BaseScreen
       end
 
     end
+
+  end
+
+  def doneWithPad
+
+    @layout.textfield.resignFirstResponder
+    @layout.textfield_email.resignFirstResponder
+
+  end
+
+  def textFieldDidBeginEditing(textField)
+
+    @layout.scroll.contentSize = CGSizeMake(320, 660) if BaseScreen.iphone4
+    @layout.scroll.contentSize = CGSizeMake(320, 570) if BaseScreen.iphone5
+    @layout.scroll.contentSize = CGSizeMake(361, 500) if BaseScreen.iphone6
+    @layout.scroll.contentSize = CGSizeMake(361, 500) if BaseScreen.iphone6plus
+
+  end
+
+  def textFieldDidEndEditing(textField)
+
+    @layout.scroll.contentSize = CGSizeMake(320, 440) if BaseScreen.iphone4
+    @layout.scroll.contentSize = CGSizeMake(320, 440) if BaseScreen.iphone5
+    @layout.scroll.contentSize = CGSizeMake(361, 500) if BaseScreen.iphone6
+    @layout.scroll.contentSize = CGSizeMake(361, 500) if BaseScreen.iphone6plus
+
+  end
+
+  def textFieldShouldReturn(textfield)
+
+    doneWithPad
 
   end
 

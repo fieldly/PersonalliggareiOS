@@ -23,8 +23,8 @@ class AuthorityLayout < MK::Layout
       frame [[15,0],[320,440]] if BaseScreen.iphone5
       frame [[15,0],[345,500]] if BaseScreen.iphone6
       frame [[15,0],[384,500]] if BaseScreen.iphone6plus
-      contentSize CGSizeMake(320, 660) if BaseScreen.iphone4
-      contentSize CGSizeMake(320, 570) if BaseScreen.iphone5
+      contentSize CGSizeMake(320, 440) if BaseScreen.iphone4
+      contentSize CGSizeMake(320, 440) if BaseScreen.iphone5
       contentSize CGSizeMake(345, 500) if BaseScreen.iphone6
       contentSize CGSizeMake(384, 500) if BaseScreen.iphone6plus
       scrollEnabled true
