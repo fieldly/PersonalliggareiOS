@@ -69,6 +69,7 @@ sv:
     label_timestamp: Incheckningstid
     label_site_number: Skatteverkets ID-nummer
     label_email: Epostadress
+    label_worksite: Arbetsplats
     label_info: Ange det ID-nummer som är registrerat på denna personalliggare i fältet ovan. När du gör detta så kommer ett meddelande skickas till den registrerade epostaddressen. Följ länken i meddelandet.
     label_code_info: Du har nu fått ett epostmeddelande. Besök länken i meddelandet och ange koden ovan för att komma åt personalliggaren. Kom ihåg att ange den exakt.
     label_code: Verifikationskod

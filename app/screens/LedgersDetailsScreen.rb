@@ -92,7 +92,6 @@ class LedgersDetailsScreen < BaseScreen
 
     @layout.line_1.setText(set_value(@data.title))
     @layout.line_2.setText(set_value(@data.location))
-    @layout.line_3.setText(set_value(@data.site_id_number))
 
     if @entry
 

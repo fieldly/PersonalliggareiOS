@@ -112,8 +112,8 @@ class AuthorityScreen < BaseScreen
 
     @layout.scroll.contentSize = CGSizeMake(320, 660) if BaseScreen.iphone4
     @layout.scroll.contentSize = CGSizeMake(320, 570) if BaseScreen.iphone5
-    @layout.scroll.contentSize = CGSizeMake(361, 500) if BaseScreen.iphone6
-    @layout.scroll.contentSize = CGSizeMake(361, 500) if BaseScreen.iphone6plus
+    @layout.scroll.contentSize = CGSizeMake(345, 510) if BaseScreen.iphone6
+    @layout.scroll.contentSize = CGSizeMake(345, 510) if BaseScreen.iphone6plus
 
   end
 
@@ -121,8 +121,8 @@ class AuthorityScreen < BaseScreen
 
     @layout.scroll.contentSize = CGSizeMake(320, 440) if BaseScreen.iphone4
     @layout.scroll.contentSize = CGSizeMake(320, 440) if BaseScreen.iphone5
-    @layout.scroll.contentSize = CGSizeMake(361, 500) if BaseScreen.iphone6
-    @layout.scroll.contentSize = CGSizeMake(361, 500) if BaseScreen.iphone6plus
+    @layout.scroll.contentSize = CGSizeMake(345, 500) if BaseScreen.iphone6
+    @layout.scroll.contentSize = CGSizeMake(345, 500) if BaseScreen.iphone6plus
 
   end
 

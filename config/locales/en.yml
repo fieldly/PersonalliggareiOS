@@ -69,6 +69,7 @@ en:
     label_timestamp: Checkin time
     label_site_number: Skatteverkets ID-number
     label_email: Email address
+    label_worksite: Work site
     label_info: "Enter the ID number that is registered on this staff ledge in the field above. When you do this, then a message is sent to the registered The email. Follow the link in the message."
     label_code_info: You have now received an e-mail message. Visit the link in the email and enter the code above to access the personnel ledger. Remember to enter it exactly.
     label_code: Verification code

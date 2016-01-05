@@ -5,7 +5,6 @@ class LedgersDetailsLayout < MK::Layout
   view :line_1
   view :line_2
   view :line_3
-  view :line_4
   
   view :icon_authority
   view :icon_emergency
@@ -27,7 +26,7 @@ class LedgersDetailsLayout < MK::Layout
       frame [[0,0],[345,150]] if BaseScreen.iphone6
       frame [[0,0],[385,150]] if BaseScreen.iphone6plus
       add UIView, :box_top
-      @location = add UIView, :box_double_line do
+      @title = add UIView, :box_double_line do
         frame [[15,20],[290,55]] if BaseScreen.iphone4
         frame [[15,20],[290,55]] if BaseScreen.iphone5
         frame [[15,20],[345,55]] if BaseScreen.iphone6
@@ -35,16 +34,13 @@ class LedgersDetailsLayout < MK::Layout
         @line_1 = add UILabel, :box_line_1_label do
           text "Construction Curt Inc"
         end
-        @line_2 = add UILabel, :box_line_2_label do
-          text "902 Bellview street, SE2443, Toronto"
-        end
       end
-      @number = add UIView, :box_single_line do
+      @location = add UIView, :box_single_line do
         frame [[15,76],[290,45]] if BaseScreen.iphone4
         frame [[15,76],[290,45]] if BaseScreen.iphone5
         frame [[15,76],[345,45]] if BaseScreen.iphone6
         frame [[15,76],[385,45]] if BaseScreen.iphone6plus
-        @line_3 = add UILabel, :box_line_3_label do
+        @line_2 = add UILabel, :box_line_3_label do
           text "Construction Curt Inc"
         end
       end

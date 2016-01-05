@@ -113,7 +113,7 @@ module GeneralStyles
     text_alignment UITextAlignmentCenter
     font "OpenSans-Bold".uifont(12)
     size_to_fit
-    top 8
+    top 17
     width '100%'
   end
 
@@ -131,7 +131,7 @@ module GeneralStyles
     text "Position"
     text_color "#333333".uicolor
     text_alignment UITextAlignmentCenter
-    font "OpenSans-Bold".uifont(12)
+    font "OpenSans-Semibold".uifont(12)
     size_to_fit
     top 14
     width '100%'

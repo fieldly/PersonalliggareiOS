@@ -185,7 +185,7 @@ class LedgersScreen < BaseScreen
     site_id.frame = [[10,0],[250,32]] if BaseScreen.iphone5
     site_id.frame = [[10,0],[250,32]] if BaseScreen.iphone6
     site_id.frame = [[10,0],[250,32]] if BaseScreen.iphone6plus
-    site_id.text = set_value(data.site_id_number)
+    site_id.text = I18n.t("ledgers.label_worksite")
     site_id.font = "OpenSans-Semibold".uifont(13)
     site_id.textColor = "#929eb6".to_color
     site_id.textAlignment = UITextAlignmentLeft
