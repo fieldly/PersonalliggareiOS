@@ -40,6 +40,7 @@ class LedgerUser < CDQManagedObject
 
             user['id'] = attributes["backend_user"]["id"]
             user['account_id'] = attributes["backend_user"]["account_id"]
+            user['account_title'] = attributes["backend_user"]["account_title"]
             user['fullname'] = attributes["backend_user"]["fullname"]
             user['email'] = attributes["backend_user"]["email"]
             user['phone'] = attributes["backend_user"]["phone"]

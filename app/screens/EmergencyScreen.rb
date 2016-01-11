@@ -130,16 +130,27 @@ class EmergencyScreen < BaseScreen
     end
 
     title = UILabel.new
-    title.frame = [[10,0],[250,42]] if BaseScreen.iphone4
-    title.frame = [[10,0],[250,42]] if BaseScreen.iphone5
-    title.frame = [[10,0],[250,42]] if BaseScreen.iphone6
-    title.frame = [[10,0],[250,42]] if BaseScreen.iphone6plus
+    title.frame = [[10,10],[250,20]] if BaseScreen.iphone4
+    title.frame = [[10,10],[250,20]] if BaseScreen.iphone5
+    title.frame = [[10,10],[250,20]] if BaseScreen.iphone6
+    title.frame = [[10,10],[250,20]] if BaseScreen.iphone6plus
     title.text = data.fullname
     title.font = "OpenSans-Bold".uifont(13)
     title.textColor = "#333".to_color if data.status == "in"
     title.textColor = "#e74c3c".to_color if data.status == "out"
     title.textAlignment = UITextAlignmentLeft
     title.backgroundColor = UIColor.clearColor
+
+    account = UILabel.new
+    account.frame = [[10,30],[250,20]] if BaseScreen.iphone4
+    account.frame = [[10,30],[250,20]] if BaseScreen.iphone5
+    account.frame = [[10,30],[250,20]] if BaseScreen.iphone6
+    account.frame = [[10,30],[250,20]] if BaseScreen.iphone6plus
+    account.text = data.account_title
+    account.font = "OpenSans-SemiBold".uifont(13)
+    account.textColor = "#333".to_color
+    account.textAlignment = UITextAlignmentLeft
+    account.backgroundColor = UIColor.clearColor
 
     icon = UILabel.new
     icon.frame = [[265,0],[50,40]] if BaseScreen.iphone4
@@ -151,12 +162,13 @@ class EmergencyScreen < BaseScreen
     icon.textColor = "#7db744".to_color
     icon.backgroundColor = UIColor.clearColor
 
-    top = UIView.alloc.initWithFrame([[0, 0],[290, 42]]) if BaseScreen.iphone4
-    top = UIView.alloc.initWithFrame([[0, 0],[290, 42]]) if BaseScreen.iphone5
-    top = UIView.alloc.initWithFrame([[0, 0],[345, 42]]) if BaseScreen.iphone6
-    top = UIView.alloc.initWithFrame([[0, 0],[385, 42]]) if BaseScreen.iphone6plus
+    top = UIView.alloc.initWithFrame([[0, 0],[290, 60]]) if BaseScreen.iphone4
+    top = UIView.alloc.initWithFrame([[0, 0],[290, 60]]) if BaseScreen.iphone5
+    top = UIView.alloc.initWithFrame([[0, 0],[345, 60]]) if BaseScreen.iphone6
+    top = UIView.alloc.initWithFrame([[0, 0],[385, 60]]) if BaseScreen.iphone6plus
     top.backgroundColor = UIColor.whiteColor
     top.addSubview(title)
+    top.addSubview(account)
     top.addSubview(icon) if data.activated == 1
 
     cell.selectionStyle = UITableViewCellSelectionStyleNone
@@ -175,7 +187,7 @@ class EmergencyScreen < BaseScreen
 
   def tableView(tableView, heightForRowAtIndexPath:indexPath)
 
-    43
+    61
 
   end
 

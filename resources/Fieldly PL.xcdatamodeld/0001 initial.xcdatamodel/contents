@@ -39,6 +39,7 @@
   <entity name="LedgerUser" syncable="YES" representedClassName="LedgerUser">
     <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="id" defaultValueString="0"/>
     <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="account_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="account_title"/>
     <attribute optional="YES" syncable="YES" attributeType="String" name="fullname"/>
     <attribute optional="YES" syncable="YES" attributeType="String" name="email"/>
     <attribute optional="YES" syncable="YES" attributeType="String" name="phone"/>
