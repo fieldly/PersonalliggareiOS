@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="0001 initial" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="0002" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
   <entity name="BackendUser" syncable="YES" representedClassName="BackendUser">
     <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="id" defaultValueString="0"/>
     <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="account_id" defaultValueString="0"/>
@@ -39,6 +39,7 @@
   <entity name="LedgerUser" syncable="YES" representedClassName="LedgerUser">
     <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="id" defaultValueString="0"/>
     <attribute optional="YES" syncable="YES" attributeType="Integer 32" name="account_id" defaultValueString="0"/>
+    <attribute optional="YES" syncable="YES" attributeType="String" name="account_title"/>
     <attribute optional="YES" syncable="YES" attributeType="String" name="fullname"/>
     <attribute optional="YES" syncable="YES" attributeType="String" name="email"/>
     <attribute optional="YES" syncable="YES" attributeType="String" name="phone"/>

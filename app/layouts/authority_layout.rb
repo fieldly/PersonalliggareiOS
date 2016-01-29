@@ -36,7 +36,7 @@ class AuthorityLayout < MK::Layout
         frame [[0,15],[384,90]] if BaseScreen.iphone6plus
         add UIView, :box_textfield_top_condensed
         add UIView, :box_textfield_middle_condensed do
-          @textfield_email = add UITextField, :box_textfield do
+          @textfield_email = add UITextField, :box_textfield_no_top do
             keyboardType UIKeyboardTypeEmailAddress   
             autocapitalizationType UITextAutocapitalizationTypeNone         
           end
@@ -49,13 +49,13 @@ class AuthorityLayout < MK::Layout
       end
 
       add UIView, :box do
-        frame [[0,126],[290,90]] if BaseScreen.iphone4
-        frame [[0,126],[290,90]] if BaseScreen.iphone5
-        frame [[0,126],[345,90]] if BaseScreen.iphone6
-        frame [[0,126],[384,90]] if BaseScreen.iphone6plus
+        frame [[0,111],[290,90]] if BaseScreen.iphone4
+        frame [[0,111],[290,90]] if BaseScreen.iphone5
+        frame [[0,111],[345,90]] if BaseScreen.iphone6
+        frame [[0,111],[384,90]] if BaseScreen.iphone6plus
         add UIView, :box_textfield_top_condensed
         add UIView, :box_textfield_middle_condensed do
-          @textfield = add UITextField, :box_textfield do
+          @textfield = add UITextField, :box_textfield_no_top do
             keyboardType UIKeyboardTypeEmailAddress   
             autocapitalizationType UITextAutocapitalizationTypeNone         
           end
@@ -68,10 +68,10 @@ class AuthorityLayout < MK::Layout
       end
 
       @info = add UIView, :box do
-        frame [[0,237],[290,90]] if BaseScreen.iphone4
-        frame [[0,237],[290,90]] if BaseScreen.iphone5
-        frame [[0,237],[345,90]] if BaseScreen.iphone6
-        frame [[0,237],[384,90]] if BaseScreen.iphone6plus
+        frame [[0,207],[290,90]] if BaseScreen.iphone4
+        frame [[0,207],[290,90]] if BaseScreen.iphone5
+        frame [[0,207],[345,90]] if BaseScreen.iphone6
+        frame [[0,207],[384,90]] if BaseScreen.iphone6plus
         add UIView, :box_info do
           add UILabel, :box_info_label do
             text I18n.t("ledgers.label_info")
@@ -80,33 +80,33 @@ class AuthorityLayout < MK::Layout
       end
 
       @code_container = add UIView, :box do
-        frame [[0,237],[290,90]] if BaseScreen.iphone4
-        frame [[0,237],[290,90]] if BaseScreen.iphone5
-        frame [[0,237],[345,90]] if BaseScreen.iphone6
-        frame [[0,237],[384,90]] if BaseScreen.iphone6plus
+        frame [[0,207],[290,70]] if BaseScreen.iphone4
+        frame [[0,207],[290,70]] if BaseScreen.iphone5
+        frame [[0,207],[345,70]] if BaseScreen.iphone6
+        frame [[0,207],[384,70]] if BaseScreen.iphone6plus
         add UIView, :box_info_centered do
-          frame [[0,0],[290,90]] if BaseScreen.iphone4
-          frame [[0,0],[290,90]] if BaseScreen.iphone5
-          frame [[0,0],[345,90]] if BaseScreen.iphone6
-          frame [[0,0],[384,90]] if BaseScreen.iphone6plus
+          frame [[0,0],[290,70]] if BaseScreen.iphone4
+          frame [[0,0],[290,70]] if BaseScreen.iphone5
+          frame [[0,0],[345,70]] if BaseScreen.iphone6
+          frame [[0,0],[384,70]] if BaseScreen.iphone6plus
           @code = add UILabel, :box_info_centered_label do
             text "0"
           end
         end
         add UIView, :box_info_normal do
-          frame [[0,91],[290,90]] if BaseScreen.iphone4
-          frame [[0,91],[290,90]] if BaseScreen.iphone5
-          frame [[0,91],[345,75]] if BaseScreen.iphone6
-          frame [[0,91],[384,90]] if BaseScreen.iphone6plus
+          frame [[0,71],[290,105]] if BaseScreen.iphone4
+          frame [[0,71],[290,105]] if BaseScreen.iphone5
+          frame [[0,71],[345,90]] if BaseScreen.iphone6
+          frame [[0,71],[384,90]] if BaseScreen.iphone6plus
           add UILabel, :box_info_3_lines_label do
             text I18n.t("ledgers.label_code_info")
           end
         end
         add UIView, :box_bottom do
-          frame [[0,181],[290,32]] if BaseScreen.iphone4
-          frame [[0,181],[290,32]] if BaseScreen.iphone5
-          frame [[0,165],[345,32]] if BaseScreen.iphone6
-          frame [[0,168],[485,32]] if BaseScreen.iphone6plus
+          frame [[0,176],[290,32]] if BaseScreen.iphone4
+          frame [[0,176],[290,32]] if BaseScreen.iphone5
+          frame [[0,161],[345,32]] if BaseScreen.iphone6
+          frame [[0,161],[485,32]] if BaseScreen.iphone6plus
           add UILabel, :box_bottom_label do
             text I18n.t("ledgers.label_code")
           end
@@ -115,10 +115,10 @@ class AuthorityLayout < MK::Layout
       end
 
       @button_fetch = add UILabel, :button_green do
-        frame [[0,363],[290,40]] if BaseScreen.iphone4
-        frame [[0,363],[290,40]] if BaseScreen.iphone5
-        frame [[0,343],[345,40]] if BaseScreen.iphone6
-        frame [[0,343],[384,40]] if BaseScreen.iphone6plus
+        frame [[0,333],[290,40]] if BaseScreen.iphone4
+        frame [[0,333],[290,40]] if BaseScreen.iphone5
+        frame [[0,313],[345,40]] if BaseScreen.iphone6
+        frame [[0,313],[384,40]] if BaseScreen.iphone6plus
         text I18n.t("ledgers.button_fetch")
       end
 

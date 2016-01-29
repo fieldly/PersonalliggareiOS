@@ -18,30 +18,18 @@ class LedgersDetailsScreen < BaseScreen
 
   end
 
-  def will_dismiss
-
-    App.notification_center.unobserve @update_ledger_entry_observer
-
-  end
-
   def setup_layout
 
     @layout = LedgersDetailsLayout.new(root: self.view).build
 
     @data = Ledger.where(:id).eq(@ledger_id).first
 
-    setup_entry
-
     setup_actions
 
     setup_properties
 
-  end
+    fetch_state
 
-  def setup_entry
-
-    @entry = LedgerEntry.where(:ledger_id).eq(@ledger_id).sort_by(:created_at, :ascending).last
-    
   end
 
   def setup_actions
@@ -60,7 +48,7 @@ class LedgersDetailsScreen < BaseScreen
 
     @layout.icon_attachments.when_tapped do
 
-      open AttachmentsScreen.new nav_bar: true, attachable_id: @data.id, attachable_type: "Project"
+      open AttachmentsScreen.new nav_bar: true, attachable_id: @ledger_id, attachable_type: "Ledger", attachment_type: "ledger"
 
     end
 
@@ -78,32 +66,26 @@ class LedgersDetailsScreen < BaseScreen
 
   end
 
-  def setup_observers
-
-    @update_ledger_entry_observer = App.notification_center.observe "updateLedgerEntry" do |notification|
-
-      setup_entry
-
-    end
-
-  end
-
   def setup_properties
 
     @layout.line_1.setText(set_value(@data.title))
     @layout.line_2.setText(set_value(@data.location))
 
-    if @entry
+  end
 
-      if @entry.status == "in"
+  def setup_state(state, date)
 
-        @layout.line_4.setText(@entry.created_at.strftime('%b %d %H:%M').to_s)
+    if state
+
+      if state == "in"
+
+        @layout.line_4.setText(date.strftime('%b %d %H:%M').to_s)
 
         @layout.button_checkin.hidden = true
         @layout.button_checkout.hidden = false
         @layout.date.hidden = false
 
-      elsif @entry.status == "out"
+      elsif state == "out"
 
         @layout.button_checkin.hidden = false
         @layout.button_checkout.hidden = true
@@ -133,6 +115,42 @@ class LedgersDetailsScreen < BaseScreen
     LedgerEntry.create(entry)
 
     cdq.save
+
+  end
+
+  def fetch_state
+
+    unless @running
+
+      @running = true
+
+      case internet_connected?
+
+        when false
+
+          show_connection_error
+
+        when true
+
+          Ledger.check_state(@data.id, true) do |result, state, date|
+
+            @running = false
+
+            if result
+
+              setup_state(state, date)
+
+            else
+
+              setup_state("out", Time.now)
+
+            end
+
+          end
+
+      end
+
+    end
 
   end
 

@@ -110,10 +110,10 @@ class AuthorityScreen < BaseScreen
 
   def textFieldDidBeginEditing(textField)
 
-    @layout.scroll.contentSize = CGSizeMake(320, 660) if BaseScreen.iphone4
-    @layout.scroll.contentSize = CGSizeMake(320, 570) if BaseScreen.iphone5
-    @layout.scroll.contentSize = CGSizeMake(345, 510) if BaseScreen.iphone6
-    @layout.scroll.contentSize = CGSizeMake(345, 510) if BaseScreen.iphone6plus
+    @layout.scroll.contentSize = CGSizeMake(320, 665) if BaseScreen.iphone4
+    @layout.scroll.contentSize = CGSizeMake(320, 577) if BaseScreen.iphone5
+    @layout.scroll.contentSize = CGSizeMake(345, 525) if BaseScreen.iphone6
+    @layout.scroll.contentSize = CGSizeMake(345, 525) if BaseScreen.iphone6plus
 
   end
 

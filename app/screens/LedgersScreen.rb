@@ -163,7 +163,7 @@ class LedgersScreen < BaseScreen
     title.frame = [[10,0],[250,33]] if BaseScreen.iphone5
     title.frame = [[10,0],[250,33]] if BaseScreen.iphone6
     title.frame = [[10,0],[250,33]] if BaseScreen.iphone6plus
-    title.text = set_value(data.title)
+    title.text = data.title
     title.font = "OpenSans-Bold".uifont(13)
     title.textColor = "#333333".to_color
     title.textAlignment = UITextAlignmentLeft
@@ -174,9 +174,9 @@ class LedgersScreen < BaseScreen
     location.frame = [[10,0],[250,32]] if BaseScreen.iphone5
     location.frame = [[10,0],[250,32]] if BaseScreen.iphone6
     location.frame = [[10,0],[250,32]] if BaseScreen.iphone6plus
-    location.text = data.location
+    location.text = set_value data.location
     location.font = "OpenSans-Semibold".uifont(13)
-    location.textColor = "#929eb6".to_color
+    location.textColor = "#333333".to_color
     location.textAlignment = UITextAlignmentLeft
     location.backgroundColor = UIColor.clearColor
 
@@ -187,7 +187,7 @@ class LedgersScreen < BaseScreen
     site_id.frame = [[10,0],[250,32]] if BaseScreen.iphone6plus
     site_id.text = I18n.t("ledgers.label_worksite")
     site_id.font = "OpenSans-Semibold".uifont(13)
-    site_id.textColor = "#929eb6".to_color
+    site_id.textColor = "#8494b3".to_color
     site_id.textAlignment = UITextAlignmentLeft
     site_id.backgroundColor = UIColor.clearColor
 

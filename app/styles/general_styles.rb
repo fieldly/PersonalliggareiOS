@@ -107,6 +107,16 @@ module GeneralStyles
     background_color "#ffffff".uicolor
   end
 
+  def box_line_1_top_label_style
+    text "Position"
+    text_color "#333333".uicolor
+    text_alignment UITextAlignmentCenter
+    font "OpenSans-Bold".uifont(13)
+    size_to_fit
+    top 17
+    width '100%'
+  end
+
   def box_line_1_label_style
     text "Position"
     text_color "#333333".uicolor
@@ -160,7 +170,7 @@ module GeneralStyles
     text "Position"
     text_color "#333333".uicolor
     text_alignment UITextAlignmentCenter
-    font "OpenSans-Semibold".uifont(10)
+    font "OpenSans-Semibold".uifont(12)
     size_to_fit
   end
 
@@ -172,6 +182,17 @@ module GeneralStyles
     top 7
     left 10
     width '100%'
+  end
+
+  def box_icons_rounded_style
+    top 48
+    left 15
+    width '100%'
+    height 95
+    background_color "#FFFFFF".uicolor
+    layer do
+      corner_radius 3.0
+    end
   end
 
   def box_title_style
@@ -225,15 +246,25 @@ module GeneralStyles
     end
   end
 
+  def box_textfield_no_top_style
+    background_color "#ffffff".uicolor
+    font "OpenSans-Semibold".uifont(13)
+    width 325 if BaseScreen.iphone6
+    width 250 unless BaseScreen.iphone6
+    top 0
+    left 10
+    height 35
+  end
+
   def box_textfield_middle_condensed_style
     top 8
-    height 55
+    height 40
     width '100%'
     background_color "#ffffff".uicolor
   end
 
   def box_textfield_bottom_condensed_style
-    top 63
+    top 48
     width '100%'
     height 32
     background_color UIColor.colorWithPatternImage(UIImage.imageNamed("body/background_round_bottom_wide.png")) if BaseScreen.iphone6

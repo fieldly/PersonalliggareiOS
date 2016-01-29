@@ -1,4 +1,4 @@
-schema "0002" do
+schema "0003" do
 
   entity "BackendUser" do
 
@@ -26,9 +26,12 @@ schema "0002" do
   entity "Ledger" do
 
     integer32 :id
+    integer32 :ledgerable_id
+    string    :ledgerable_type
     string    :title
     string    :location
     string    :site_id_number
+    string    :current_state
     integer32 :backend_user_id
     datetime  :starts_at
     datetime  :ends_at

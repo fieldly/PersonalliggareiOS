@@ -52,7 +52,7 @@
 "ledgers.heading_authority" = "Skatteverket";
 "ledgers.label_click_to_select" = "Klicka för att välja";
 "ledgers.label_authority" = "Skatteverket";
-"ledgers.label_emergency" = "NÖDLISTA";
+"ledgers.label_emergency" = "Nödlista";
 "ledgers.label_attachments" = "Dokument";
 "ledgers.label_worksite" = "Arbetsplats";
 "ledgers.label_actions" = "Åtgärder";

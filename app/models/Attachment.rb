@@ -2,7 +2,7 @@ class Attachment < CDQManagedObject
 
   Notifier = Motion::Blitz
 
-  def self.fetch_content(attachable_id, attachable_type, message, &callback)
+  def self.fetch_content(attachable_id, attachable_type, type, message, &callback)
 
     Notifier.show(I18n.t("loading.fetching"), :gradient) if message
 
@@ -14,8 +14,12 @@ class Attachment < CDQManagedObject
 
     url = "#{Base.base_url}projects/#{attachable_id}/attachments" if attachable_type == "Project"
     url = "#{Base.base_url}workorders/#{attachable_id}/attachments" if attachable_type == "Workorder"
+    url = "#{Base.base_url}backend_users/#{attachable_id}/attachments" if attachable_type == "BackendUser"
+    url = "#{Base.base_url}ledgers/#{attachable_id}/attachments" if attachable_type == "Ledger"
 
-    data = {access_token: Base.access_token}
+    p "#{url}?access_token=#{Base.access_token}"
+
+    data = {access_token: Base.access_token, type: type}
 
     AFMotion::HTTP.get(url, data) do |result|
 

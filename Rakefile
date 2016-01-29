@@ -23,11 +23,13 @@ Motion::Project::App.setup do |app|
   app.development do
 
     app.entitlements['get-task-allow'] = true
-    app.identifier = 'com.fieldly.app'
-    app.provisioning_profile = '/Users/danielkrusenstrahle/Documents/certs/fieldly/development/FieldlyDeveloper.mobileprovision'
+    app.identifier = 'com.fieldly.development'
+    app.provisioning_profile = '/Users/danielkrusenstrahle/Documents/certs/fieldly/development/FieldlyDevelopment.mobileprovision'
     app.codesign_certificate = 'iPhone Developer: Daniel Krusenstraehle (97E74V8P2W)'
-    app.entitlements['aps-environment'] = 'development'
-    app.info_plist['CFBundleURLTypes'] = [{'CFBundleURLName' => 'com.fieldly.app', 'CFBundleURLSchemes' => ['fieldlypersonalliggare'] }]
+    #app.entitlements['aps-environment'] = 'development'
+    app.entitlements['application-identifier'] = "#{app.seed_id}.#{app.identifier}"
+    app.entitlements['keychain-access-groups'] = ["#{app.seed_id}.#{app.identifier}"]
+    app.info_plist['CFBundleURLTypes'] = [{'CFBundleURLName' => 'com.fieldly.development', 'CFBundleURLSchemes' => ['fieldly'] }]
 
   end
 

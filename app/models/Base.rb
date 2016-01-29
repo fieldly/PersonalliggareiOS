@@ -6,6 +6,14 @@
     
   end
 
+  def self.base_url
+
+    #"https://fieldly.com/api/v2/"
+    #"http://qa.fieldly.com/api/v2/"
+    "http://53aac984.ngrok.io/api/v2/"
+
+  end
+
   def self.access_token
 
     user = BackendUser.first
@@ -385,13 +393,6 @@
       when "completed" then I18n.t("general.state_completed")
       when "closed" then I18n.t("general.state_closed")
     end
-
-  end
-
-  def self.base_url
-
-    #"https://fieldly.com/api/v2/"
-    "http://qa.fieldly.com/api/v2/"
 
   end
 

@@ -1,6 +1,6 @@
 class AttachmentsScreen < BaseScreen
 
-  attr_accessor :attachable_id, :attachable_type
+  attr_accessor :attachable_id, :attachable_type, :attachment_type
 
   title I18n.t("attachments.heading")
 
@@ -95,7 +95,7 @@ class AttachmentsScreen < BaseScreen
 
       when true
 
-        Attachment.fetch_content(@attachable_id, @attachable_type, true) do |success, response|
+        Attachment.fetch_content(@attachable_id, @attachable_type, @attachment_type, true) do |success, response|
 
           case success
 
@@ -168,7 +168,7 @@ class AttachmentsScreen < BaseScreen
     filetype.frame = [[10,0],[250,32]] if BaseScreen.iphone6plus
     filetype.text = set_value(data.filetype)
     filetype.font = "OpenSans-Semibold".uifont(13)
-    filetype.textColor = "#a1acc2".to_color
+    filetype.textColor = "#8494b3".to_color
     filetype.textAlignment = UITextAlignmentLeft
     filetype.backgroundColor = UIColor.clearColor
 
@@ -217,10 +217,8 @@ class AttachmentsScreen < BaseScreen
   end
 
   def close_window
-
-    App.notification_center.post "updateLedgerEntry"
     
-    close
+    close do_nothing: true
 
   end
 
