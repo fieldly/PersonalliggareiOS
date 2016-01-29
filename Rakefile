@@ -11,7 +11,7 @@ end
 Motion::Project::App.setup do |app|
   app.name = 'Fieldly PL'
   app.version = "1.0.1"
-  app.short_version = "1.0.4"
+  app.short_version = "1.0.5"
   app.deployment_target = '7.0'
   app.device_family = [:iphone]
   app.icons = Dir.glob("resources/Icon*.png").map{|icon| icon.split("/").last}
