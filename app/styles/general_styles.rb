@@ -337,6 +337,25 @@ module GeneralStyles
     end
   end
 
+  def button_big_red_style
+    background_color "#E74C42".uicolor
+    layer do
+      corner_radius 3.0
+    end
+  end
+
+  def button_big_heading_red_style
+    text_color "#ffffff".uicolor
+    font "OpenSans-Bold".uifont(13)
+    text_alignment UITextAlignmentCenter
+  end
+
+  def button_big_subheading_red_style
+    text_color "#ffbcb8".uicolor
+    font "OpenSans-Bold".uifont(12)
+    text_alignment UITextAlignmentCenter
+  end
+
   def scroll_top_style
     background_color "#FFFFFF".uicolor
     scrollEnabled true

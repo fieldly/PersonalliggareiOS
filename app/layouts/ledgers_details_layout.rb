@@ -116,39 +116,11 @@ class LedgersDetailsLayout < MK::Layout
       end
     end
 
-    @date = add UIView, :box do
-      frame [[0,435],[120,95]] if BaseScreen.iphone4
-      frame [[0,337],[320,95]] if BaseScreen.iphone5
-      frame [[0,435],[380,95]] if BaseScreen.iphone6
-      frame [[0,505],[380,95]] if BaseScreen.iphone6plus
-      add UIView, :box_top
-      add UIView, :box_single_line do
-        frame [[15,20],[290,45]] if BaseScreen.iphone4
-        frame [[15,20],[290,45]] if BaseScreen.iphone5
-        frame [[15,20],[345,45]] if BaseScreen.iphone6
-        frame [[15,20],[385,45]] if BaseScreen.iphone6plus
-        @line_4 = add UILabel, :box_line_3_label do
-          text "21 june"
-          font "OpenSans-Bold".uifont(13)
-        end
-      end
-      @bottom_box = add UIView, :box_bottom do
-        frame [[15,65],[290,32]] if BaseScreen.iphone4
-        frame [[15,65],[290,32]] if BaseScreen.iphone5
-        frame [[15,65],[345,32]] if BaseScreen.iphone6
-        frame [[15,65],[385,32]] if BaseScreen.iphone6plus
-        add UILabel, :box_bottom_label do
-          text I18n.t("ledgers.label_timestamp")
-        end
-      end
-      hidden true
-    end
-
     @buttons = add UIView, :box_buttons do
-      frame [[0,360],[320,55]] if BaseScreen.iphone4
-      frame [[0,450],[320,55]] if BaseScreen.iphone5
-      frame [[0,549],[380,55]] if BaseScreen.iphone6
-      frame [[0,618],[380,55]] if BaseScreen.iphone6plus
+      frame [[0,302],[320,55]] if BaseScreen.iphone4
+      frame [[0,302],[320,55]] if BaseScreen.iphone5
+      frame [[0,302],[380,55]] if BaseScreen.iphone6
+      frame [[0,302],[380,55]] if BaseScreen.iphone6plus
       @button_checkin = add UILabel, :button_green do
         frame [[15,0],[290,40]] if BaseScreen.iphone4
         frame [[15,0],[290,40]] if BaseScreen.iphone5
@@ -157,12 +129,25 @@ class LedgersDetailsLayout < MK::Layout
         text I18n.t("ledgers.label_checkin").upcase
         hidden true
       end
-      @button_checkout = add UILabel, :button_red do
-        frame [[15,0],[290,40]] if BaseScreen.iphone4
-        frame [[15,0],[290,40]] if BaseScreen.iphone5
-        frame [[15,0],[345,40]] if BaseScreen.iphone6
-        frame [[15,0],[385,40]] if BaseScreen.iphone6plus
-        text I18n.t("ledgers.label_checkout").upcase
+      @button_checkout = add UIView, :button_big_red do
+        frame [[15,0],[290,50]] if BaseScreen.iphone4
+        frame [[15,0],[290,50]] if BaseScreen.iphone5
+        frame [[15,0],[345,50]] if BaseScreen.iphone6
+        frame [[15,0],[385,50]] if BaseScreen.iphone6plus
+        add UILabel, :button_big_heading_red do
+          frame [[0,10],[290,15]] if BaseScreen.iphone4
+          frame [[0,10],[290,15]] if BaseScreen.iphone5
+          frame [[0,10],[345,15]] if BaseScreen.iphone6
+          frame [[0,10],[385,15]] if BaseScreen.iphone6plus
+          text I18n.t("ledgers.label_checkout") 
+        end
+        add UILabel, :button_big_subheading_red do
+          frame [[0,25],[290,15]] if BaseScreen.iphone4
+          frame [[0,25],[290,15]] if BaseScreen.iphone5
+          frame [[0,25],[345,15]] if BaseScreen.iphone6
+          frame [[0,25],[385,15]] if BaseScreen.iphone6plus
+          @line_4 = text I18n.t("timereports.label_calculating")
+        end
         hidden true
       end
     end

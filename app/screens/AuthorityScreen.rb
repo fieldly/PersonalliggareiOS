@@ -27,6 +27,8 @@ class AuthorityScreen < BaseScreen
     @layout.textfield.delegate = self
     @layout.textfield_email.delegate = self
 
+    @layout.textfield.text = @data.site_id_number
+
     setup_actions
 
   end

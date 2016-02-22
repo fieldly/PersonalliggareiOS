@@ -79,17 +79,15 @@ class LedgersDetailsScreen < BaseScreen
 
       if state == "in"
 
-        @layout.line_4.setText(date.strftime('%b %d %H:%M').to_s)
+        @layout.line_4.setText(date.strftime('%d %b %H:%M').to_s)
 
         @layout.button_checkin.hidden = true
         @layout.button_checkout.hidden = false
-        @layout.date.hidden = false
 
       elsif state == "out"
 
         @layout.button_checkin.hidden = false
         @layout.button_checkout.hidden = true
-        @layout.date.hidden = true
 
       end
 
@@ -97,7 +95,6 @@ class LedgersDetailsScreen < BaseScreen
 
         @layout.button_checkin.hidden = false
         @layout.button_checkout.hidden = true
-        @layout.date.hidden = true
 
     end
 
@@ -168,19 +165,30 @@ class LedgersDetailsScreen < BaseScreen
 
         when true
 
-          LedgerEntry.create_entry(@data.id, "in", get_data("latitude"), get_data("longitude"), true) do |result|
+          LedgerEntry.create_entry(@data.id, "in", get_data("latitude"), get_data("longitude"), true) do |result, code|
+
+            @running = false
 
             if result
 
-              @running = false
-
-              @layout.line_4.setText(Time.now.strftime('%b %d %H:%M').to_s)
+              @layout.line_4.setText(Time.now.strftime('%d %b %H:%M').to_s)
 
               @layout.button_checkin.hidden = true
               @layout.button_checkout.hidden = false
-              @layout.date.hidden = false
 
               save_to_database(1, "in")
+
+            else
+
+              if code == 401
+
+                App.alert I18n.t("loading.login_failed")
+
+              elsif code == 422
+                  
+                App.alert(I18n.t("ledgers.label_code_#{code}"))
+
+              end
 
             end
 
@@ -206,17 +214,28 @@ class LedgersDetailsScreen < BaseScreen
 
         when true
 
-          LedgerEntry.create_entry(@data.id, "out", get_data("latitude"), get_data("longitude"), true) do |result|
+          LedgerEntry.create_entry(@data.id, "out", get_data("latitude"), get_data("longitude"), true) do |result, code|
+
+            @running = false
 
             if result
 
-              @running = false
-
               @layout.button_checkin.hidden = false
               @layout.button_checkout.hidden = true
-              @layout.date.hidden = true
 
               save_to_database(1, "out")
+
+            else
+
+              if code == 401
+
+                App.alert I18n.t("loading.login_failed")
+
+              elsif code == 422
+                  
+                App.alert(I18n.t("ledgers.label_code_#{code}"))
+
+              end
 
             end
 
