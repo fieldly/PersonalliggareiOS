@@ -16,9 +16,9 @@ class LedgerEntry < CDQManagedObject
 
     AFMotion::HTTP.post("#{Base.base_url}ledgers/#{ledger}/ledger_entries", data) do |result|
 
-      if result.success?
+      Notifier.dismiss if message
 
-        Notifier.dismiss if message
+      if result.success?
 
         callback.call(true)
 

@@ -35,6 +35,10 @@
 "dialog.message_timereport_size_error" = "End date is smaller than start date";
 "dialog.message_google_error" = "Something went wrong try another address or try later";
 "general.label_project" = "Project";
+"general.label_code_401" = "You are not logged in";
+"general.label_code_404" = "The URL was wrong";
+"general.label_code_422" = "There are required data missing";
+"general.label_code_500" = "The report was unable to be sent to server";
 "login.heading" = "Login";
 "login.label_email" = "Email address *";
 "login.label_email_info" = "Enter your email address";
@@ -70,6 +74,7 @@
 "ledgers.label_dialog_no" = "false";
 "ledgers.label_empty" = "There are no ledgers";
 "ledgers.label_empty_entries" = "There are no users";
+"ledgers.label_code_422" = "You have to add a personal number or a card number before you can use the ledger";
 "ledgers.label_checkin" = "I AM HERE";
 "ledgers.label_checkout" = "I AM LEAVING";
 "ledgers.button_fetch" = "FETCH LEDGER";

@@ -42,6 +42,10 @@ en:
     message_google_error: "Something went wrong try another address or try later"
   general:
     label_project: Project
+    label_code_401: You are not logged in
+    label_code_404: The URL was wrong
+    label_code_422: There are required data missing
+    label_code_500: The report was unable to be sent to server
   login:
     heading: Login
     label_email: Email address *
@@ -81,6 +85,7 @@ en:
     label_dialog_no: No
     label_empty: There are no ledgers
     label_empty_entries: There are no users
+    label_code_422: You have to add a personal number or a card number before you can use the ledger
     label_checkin: I AM HERE
     label_checkout: I AM LEAVING
     button_fetch: FETCH LEDGER

@@ -1,0 +1,103 @@
+pl:
+  loading:
+    activating: "Aktywowanie"
+    pausing: "Wstrzymywanie"
+    completing: "Ukańczanie"
+    fetching: "Pobieranie"
+    sending: "Wysyłanie"
+    deleting: "Usuwanie"
+    updating: "Aktualizowanie"
+    closing: "Zamykanie"
+    pausing: "Reaktywowanie"
+    reactivating: "Reactivating"
+    sent: "Wysłano!"
+    updated: "Zaktualizowano!"
+    deleted: "Usunięto!"
+    missing: "Wszystkie pola oznaczone * są obowiązkowe"
+    server_error: "Wystąpił błąd"
+    failed: "Wysłanie nie powiodło się"
+    login_failed: "Nieprawidłowy email lub hasło"
+    selecting: "Wybieranie"
+    no_connection: "Brak połączenia"
+  refresh: 
+    fetching: "Pobieranie danych..."
+    pull: "Przesuń w dół by odświeżyć"
+    release: "Puść aby odświerzyć"
+  message:
+    no_connection: "Wymagane jest połączenie z internetem"
+    no_attachment: "Brak załącznika"
+    no_project_id: "Wybierz projekt"
+    no_value: Missing
+    not_released: "Ta funkcjonalność nie jest jeszcze dostępna"
+  dialog:
+    message_refreshed_projects: "Zaktualizowano projekty"
+    message_refreshed_workorders: "Zaktualizowano zlecenia"
+    message_refreshed_destinations: "Zaktualizowano lokalizacje"
+    message_new_task: "Otrzymałeś nowe zadanie"
+    message_updated_task: "Jedno z twoich zadań zostało zaktualizowane"
+    message_travel_error: "Wypełnij wszystkie pola"
+    message_workorder_error: "Wypełnij wszystkie pola"
+    message_timereport_error: Wypełnij wszystkie pola
+    message_timereport_size_error: "Data ukończenia jest przed datą rozpoczęcia"
+    message_google_error: "Wystąpił błąd, sprobuj ponownie"
+  general:
+    label_project: "Projekt"
+    label_code_401: Nie jesteś zalogowany
+    label_code_404: URL mylił
+    label_code_422: Nie są wymagane dane brakujące
+    label_code_500: Raport nie mógł być wysłany do serwera
+  login:
+    heading: "Logowanie"
+    label_email: "Email *"
+    label_email_info: "Podaj adres email"
+    label_password: "Hasło *"
+    label_password_info: "Podaj hasło"
+    placeholder_email: "Kliknij tutaj aby podać email"
+    placeholder_password: "Kliknij tutaj aby podać hasło"
+    button_login: "ZALOGUJ"
+    message_missing_fields: "Wypełnij obydwa pola"
+  login_setup:
+    heading_location: "Aktywuj lokalizację"
+    heading_push: "Aktywuj notyfikacje push"
+    message_location: "Kliknij poniżej aby aktywować lokalizację"
+    message_push: "Kliknij poniżej aby aktywować notyfikacje push"
+    button_activate_location: "AKTYWUJ LOKALIZACJĘ"
+    button_activate_push: "AKTYWUJ NOTYFIKACJE"
+  ledgers:
+    heading: Rejestr
+    heading_details: Rejestr
+    heading_authority: Skatteverket
+    label_click_to_select: Kliknij aby wybrać
+    label_authority: Skatteverket
+    label_emergency: List awaryjna
+    label_attachments: Załączniki
+    label_worksite: Miejsce pracy
+    label_actions: Akcje
+    label_timestamp: Czas logowania
+    label_timestamp_timer: Czas pracy
+    label_site_number: Numer rejestru (Skatteverkets ID)
+    label_email: Email
+    label_ledger_short: REJESTR
+    label_info: "Podaj numer rejestru w polu powyżej. Zostanie wysłana wiadomość email pod podany adres. Kliknij na link w wiadomości."
+    label_code_info: "Otrzymałeś wiadomość email. Kliknij na link w wiadomości i wpisz powyższy kod, aby uzyskać dostęp do rejestru."
+    label_code: Kod weryfikacyjny
+    label_missing_fields: Podaj numer rejestru (Skatteverkets ID)
+    label_do_not_match: Podaj numer rejestru jest niepoprawny
+    label_dialog_title: "Wiadomość"
+    label_dialog_message_logout: "Czy napewno chcesz się wylogować?"
+    label_dialog_yes: Tak
+    label_dialog_no: Nie
+    label_empty: Brak rejestrów
+    label_empty_entries: Brak wpisów
+    label_code_422: "Prawdopodobnie nie dodałeś osobistego identyfikatora pracownika lub numery karty identyfikacyjnej"
+    label_checkin: WCHODZĘ
+    label_checkout: WYCHODZĘ
+    button_fetch: POBIERZ REJESTR
+  attachments:
+    heading: Załączniki
+    heading_show: Pokaż
+    message_empty: Brak załączników
+    label_archive: Kliknij poniżej aby otworzyć załącznik
+  emergency:
+    heading: Lista awaryjna
+

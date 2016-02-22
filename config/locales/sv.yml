@@ -42,6 +42,10 @@ sv:
     message_google_error: "Något gick fel testa en annan adress eller vänta en liten stund och prova igen"
   general:
     label_project: Projekt
+    label_code_401: Du är inte inloggad
+    label_code_404: Adressen är felaktig
+    label_code_422: Det saknas obligatorisk informationen
+    label_code_500: Det gick inte att skicka till servern
   login:
     heading: Inloggning
     label_email: Epostadress *
@@ -81,6 +85,7 @@ sv:
     label_dialog_no: Nej
     label_empty: Det finns inga liggare
     label_empty_entries: Det finns inga medarbetare
+    label_code_422: Du måste lägga till ett personnummer eller kortnummer innan du kan använda personalliggaren
     label_checkin: JAG ÄR PÅ PLATSEN
     label_checkout: JAG LÄMNAR PLATSEN
     button_fetch: HÄMTA PERSONALLIGARE

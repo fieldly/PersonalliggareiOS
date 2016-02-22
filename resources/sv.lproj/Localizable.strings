@@ -35,6 +35,10 @@
 "dialog.message_workorder_error" = "Välj alla fält";
 "dialog.message_google_error" = "Något gick fel testa en annan adress eller vänta en liten stund och prova igen";
 "general.label_project" = "Projekt";
+"general.label_code_401" = "Du är inte inloggad";
+"general.label_code_404" = "Adressen är felaktig";
+"general.label_code_422" = "Det saknas obligatorisk informationen";
+"general.label_code_500" = "Det gick inte att skicka till servern";
 "login.heading" = "Inloggning";
 "login.label_email" = "Epostadress *";
 "login.label_email_info" = "Ange din epostadress";
@@ -70,6 +74,7 @@
 "ledgers.label_dialog_no" = "Nej";
 "ledgers.label_empty" = "Det finns inga liggare";
 "ledgers.label_empty_entries" = "Det finns inga medarbetare";
+"ledgers.label_code_422" = "Du måste lägga till ett personnummer eller kortnummer innan du kan använda personalliggaren";
 "ledgers.label_checkin" = "JAG ÄR PÅ PLATSEN";
 "ledgers.label_checkout" = "JAG LÄMNAR PLATSEN";
 "ledgers.button_fetch" = "HÄMTA PERSONALLIGARE";
