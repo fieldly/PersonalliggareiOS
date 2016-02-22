@@ -8,9 +8,9 @@
 
   def self.base_url
 
-    #"https://fieldly.com/api/v2/"
+    "https://fieldly.com/api/v2/"
     #"http://qa.fieldly.com/api/v2/"
-    "http://66454c5b.ngrok.io/api/v2/"
+    #"http://66454c5b.ngrok.io/api/v2/"
 
   end
 
